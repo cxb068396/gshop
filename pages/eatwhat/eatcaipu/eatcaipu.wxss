@@ -1,0 +1,173 @@
+/* pages/eatwhat/eatcaipu/eatcaipu.wxss */
+@import "../../../lib/wxParse/wxParse.wxss";
+@import "../eatwhat.wxss";
+page{
+  /* background: #f6f6f6; */
+}
+.cp_header{
+width: 100%;
+height: 220rpx;
+padding-left: 30rpx;
+padding-right: 30rpx;
+box-sizing: border-box;
+background: #ffffff;
+position: relative;
+}
+.cp_heimg{
+  width: 210rpx;
+  height: 160rpx;
+  margin-top: 30rpx;
+  border-radius: 10rpx;
+}
+.cp_hetitle{
+  color: #222222;
+  font-size: 28rpx;
+  display: inline-block;
+  position: absolute;
+  top: 30rpx;
+  margin-left: 30rpx;
+
+}
+.cp_hecent{
+  width:452rpx;
+  height:93rpx;
+  color: #888888;
+  font-size: 22rpx;
+  position: absolute;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  bottom: 30rpx;
+  right: 60rpx;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  overflow: hidden;
+  vertical-align: middle;
+}
+/* 灰色块 */
+.black{
+  width: 100%;
+  height: 10rpx;
+  background-color: #f6f6f6;
+}
+
+.cp_tuij{
+  width: 100%;
+  height: 170rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  background: #fff;
+}
+.cp_tuij_title{
+  color: #666666;
+  font-size: 26rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+}
+.cp_center{
+  width: 100%;
+  height: 80rpx;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5rpx;
+}
+.cp_wrap{
+  width: 210rpx;
+  height: 80rpx;
+  position: relative;
+  /* border: 1px solid #222222; */
+}
+.cp_img1{
+  width: 80rpx;
+  height: 80rpx;
+}
+.cp_img2{
+  width: 28rpx;
+  height: 28rpx;
+  margin-left: 13rpx;
+  
+}
+.cp_text{
+  color: #222222;
+  font-size: 20rpx;
+  display: inline-block;
+  width: 120rpx;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.cp_money{
+  color: #FE4545;
+  font-size: 20rpx;
+  display: inline-block;
+}
+.cp_shicai{
+  color: #888888;
+  font-size: 24rpx;
+  background: #ffffff;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  line-height: 40rpx;
+}
+rich-text{
+  width:697rpx;
+  height:408rpx;
+}
+.cp_shicai2{
+  color: #888888;
+  font-size: 24rpx;
+  background: #ffffff;
+  line-height: 40rpx;
+  padding-top: 25rpx;
+}
+.cp_btnShop{
+  width:120rpx;
+  height:60rpx;
+  background:rgba(0,0,0,0.05);
+  border-radius:30rpx;
+  position: fixed;
+  right: -30rpx;
+  bottom: 120rpx;
+  line-height: 60rpx;
+  z-index: 500;
+}
+.cp_btnShop image{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 10rpx;
+  margin-left: 28rpx;
+}
+.zhanW{
+  width: 100%;
+  height: 300rpx;
+  background-color: #f6f6f6;
+}
+.wx_parse{
+padding-left: 38rpx;
+box-sizing: border-box;
+padding-right: 30rpx;
+padding-bottom: 15rpx;
+line-height: 45rpx;
+}
+
+.eat_cc{
+  width: 100%;
+  padding-left: 30rpx;
+  height: 112rpx;
+  line-height: 112rpx;
+  position: relative;
+}
+.eat_cjcp{
+  display: inline-block;
+  margin-left: 20rpx;
+  color: #666666;
+  font-size: 28rpx;
+  position: absolute;
+  top: 0;
+}
+.caipu_container{
+  overflow-x: hidden;
+}

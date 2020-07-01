@@ -1,0 +1,19 @@
+<!-- 单选弹窗 -->
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{show}}"></view>
+<view class="modal-dialog" wx:if="{{show}}">
+		<view class="modal-title">{{title}}</view>
+		<block wx:for="{{radioOptions}}" wx:key="index">
+				<view class="modal-content">
+						<view class="modal-input" bindtap="selectClick" data-index="{{index}}">
+								<text class="model-input-word">{{item.text}}</text>
+								<view class="model-input-inp" >
+										<view class="yellow" wx:if="{{item.selected}}"></view>
+								</view>
+						</view>
+						<view class="line_a"></view>
+				</view>
+		</block>
+		<view class="modal-footer">
+				<view class="btn-cancel" bindtap="onCancel" data-status="cancel">取消</view>
+		</view>
+</view>

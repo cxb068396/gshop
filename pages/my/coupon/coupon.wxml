@@ -1,0 +1,84 @@
+<!-- wxs -->
+<wxs src="../../../utils/coupon.wxs" module="tools"/>
+
+<!--pages/my/coupon/coupon.wxml-->
+<view class="swiper-tab">
+  <view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="2" data-otype="pay" bindtap="swichNav">未使用({{arrList.length}})</view>
+   <view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="3" data-otype="deliver" bindtap="swichNav">已使用({{arrList1.length}})</view> 
+  <view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="4" data-otype="receive" bindtap="swichNav">已过期({{arrList2.length}})</view>
+</view> 
+<view class="c_t60"></view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+
+  
+  <!-- 未使用 -->
+  <swiper-item wx:if='{{arrList.length == 0}}'>
+    <view class="wrap-bottom">
+        <image src="/pages/static/icon/wu.png" class="wu"></image>
+        <text class="wucoupon">暂无优惠券</text>
+    </view>
+  </swiper-item>
+  <swiper-item wx:if="{{arrList.length>0}}"> 
+    <view class="noUse_cp">
+      <input class="noUse_cpInp" type="number" bindinput="codeInput" value="{{inputValue}}" placeholder-style="margin-left:20rpx;box-sizing:border-box" placeholder="请输入兑换码"></input>
+      <view class="noUse_cpbtn"><text class="noUse_cpbtnWord"  bindtap="bindsave">确定兑换</text></view>
+    </view>
+    <view class="noUse-container" wx:for="{{arrList}}" wx:key="index" bind:tap="useCoupon" data-index="{{index}}">
+      <image class="noUse-images" src="/pages/static/icon/1.png"/>
+      <view class="noUse-imgwords" wx:if="{{arrList.minus > 10}}"><text>￥</text>{{tools.oneself_coupon(item.minus)}}</view>
+      <view class="noUse-imgwords1" wx:else><text>￥</text>{{tools.oneself_coupon(item.minus)}}</view>
+      <view class="noUse-imgwordsone">{{item.coupon_name}}</view>
+      <view class="noUse-imgwordstwo">适用于单笔满{{tools.oneself_coupon(item.full)}}元使用</view>
+      <view class="noUse-imgwordsthree"><text>{{tools.s_coupon(item.limit_time)}}</text></view>
+      <image class="noUse-imgwordsfour" wx:if="{{item.isTrue}}" src="/pages/static/icon/jjgq.png"/>
+    </view>   
+  </swiper-item>
+  <!-- 已使用 -->
+  <swiper-item wx:if='{{arrList1.length === 0}}'>
+    <view class="wrap-bottom">
+        <image src="/pages/static/icon/wu.png" class="wu"></image>
+        <text class="wucoupon">暂无优惠券</text>
+    </view>
+  </swiper-item>
+  <swiper-item wx:else>
+    <view class="noUse_cp" >
+      <input class="Use_cpInp" placeholder="    请输入兑换码"></input>
+      <view class="Use_cpbtn">兑换</view>
+    </view>
+    <view class="noUse-container" wx:for="{{arrList1}}" wx:key="index">
+      <image class="noUse-images" src="/pages/static/icon/2.png"/>
+      <view class="noUse-imgwords"><text>￥</text>{{tools.oneself_coupon(item.minus)}}</view>
+      <view class="noUse-imgwordsone">{{item.coupon_name}}</view>
+      <view class="noUse-imgwordstwo">适用于单笔满{{tools.oneself_coupon(item.full)}}元使用</view>
+      <view class="noUse-imgwordsthree"><text>{{tools.s_coupon(item.limit_time)}}</text></view>
+      <image class="noUse-imgwordsfour" src="/pages/static/icon/ysy.png"/>
+    </view>
+  </swiper-item>
+
+  <!-- 已过期 -->
+  <swiper-item wx:if='{{arrList2.length === 0}}'>
+    <view class="wrap-bottom">
+        <image src="/pages/static/icon/wu.png" class="wu"></image>
+        <text class="wucoupon">暂无优惠券</text>
+    </view>
+  </swiper-item>
+  <swiper-item wx:else>
+    <view class="noUse_cp">
+      <input class="Use_cpInp" placeholder="    请输入兑换码"></input>
+      <view class="Use_cpbtn">兑换</view>
+    </view>
+    <view class="noUse-container" wx:for="{{arrList2}}" wx:key="index">
+      <image class="noUse-images" src="/pages/static/icon/2.png"/>
+      <view class="noUse-imgwords"><text>￥</text>{{tools.oneself_coupon(item.minus)}}</view>
+      <view class="noUse-imgwordsone">{{item.coupon_name}}</view>
+      <view class="noUse-imgwordstwo">适用于单笔满{{tools.oneself_coupon(item.full)}}元使用</view>
+      <view class="noUse-imgwordsthree"><text>{{tools.s_coupon(item.limit_time)}}</text></view>
+      <image class="noUse-imgwordsfour" src="/pages/static/icon/ygq.png"/>
+    </view>
+  </swiper-item>
+</swiper>
+   <view class="noUse-bom" bindtap="todraw">
+      <text>领取更多优惠券</text>
+  </view>
+<view class=""></view>
+

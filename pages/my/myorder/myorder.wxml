@@ -1,0 +1,202 @@
+<!--pages/user/dingdan.wxml-->
+<view class="swiper-tab">
+	<view class="swiper-tab-list {{currentTab==0 ? 'on' : ''}}" data-current="0" data-otype="pay" bindtap="swichNav">全部</view>
+	<view class="swiper-tab-list {{currentTab==1 ? 'on' : ''}}" data-current="1" data-otype="deliver" bindtap="swichNav">待付款</view>
+	<view class="swiper-tab-list {{currentTab==2 ? 'on' : ''}}" data-current="2" data-otype="receive" bindtap="swichNav">待发货</view>
+	<view class="swiper-tab-list {{currentTab==3 ? 'on' : ''}}" data-current="3" data-otype="finish" bindtap="swichNav">待收货</view>
+	<view class="swiper-tab-list {{currentTab==4 ? 'on' : ''}}" data-current="4" bindtap="swichNav">待评价</view>
+</view>
+<view class="c_t60"></view>
+<swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{windowHeight - 31}}px" catchchange="bindChange">
+
+	<!-- 全部 -->
+	<swiper-item>
+		<scroll-view scroll-y='true' 
+	  	bindscrolltolower="bindDownLoad"
+		 bindscroll="scroll" 
+		 bindscrolltoupper="refresh"
+
+>
+			<view class="search_no" wx:if="{{!orderList0.length}}">
+				<!-- 灰色的 -->
+				<view class="black"></view>
+				<view class="font_14">
+					<image class="scimg" src="/pages/static/icon/wuorder.png" width="100%"></image>
+				</view>
+				<text>暂无订单</text>
+			</view>
+
+			<block wx:for="{{orderList0}}" wx:key="index">
+				<order-item order="{{item}}">
+					<block wx:if="{{item.order_status == 1}}">
+						<view class="service" bind:tap="cancelOrder" data-index="{{index}}" data-id='{{item.id}}'>取消订单</view>
+						<view class="service orange" bind:tap="topay" data-index="{{index}}">去支付</view>
+					</block>
+					<block wx:elif="{{item.order_status == 2}}">
+						<view class="service" bind:tap="cancelOrder1" data-index="{{index}}" data-id="{{item.id}}">取消订单</view>
+					</block>
+						<block wx:elif="{{item.order_status == 5}}">
+						<view class="service" bindtap="AbrogateDelete" data-index="{{index}}" data-id="{{item.id}}">删除订单</view>
+					</block>
+           <block wx:elif="{{item.order_status == 3}}">
+						<view class="shouhou" bindtap="drawback" data-index="{{index}}">售后/退款</view>
+                        <view class="youpurch" bind:tap="jumpPage" data-key="logistics" data-index="{{index}}">查看物流</view>
+                        <view class="service orange" data-index="{{index}}" bindtap="recOrder">确定收货</view>
+					</block>
+					<!--交易成功-->
+					 <block wx:elif="{{item.order_status == 8}}">
+						<view class="shouhou" bindtap="drawback" data-index="{{index}}">售后/退款</view>
+                        <view class="youpurch" bind:tap="jumpPage" data-key="logistics" data-index="{{index}}">再次购买</view>
+                        <view class="service orange" data-index="{{index}}" bindtap="recOrder">评价</view>
+					</block>
+					<block wx:elif="{{item.order_status == 6}}">
+					 <view class="youpurch" bindtap="AbrogateDelete"  data-key="logistics" data-index="{{index}}" data-id="{{item.id}}">删除订单</view>
+                        <view class="service orange" bindtap="buyAgain" data-index="{{index}}" data-id='{{item.id}}' data-status='{{item.order_status}}'>再次购买</view>
+					</block>
+					<block wx:elif="{{item.order_status == 4}}">
+						<view class="service" bind:tap="jumpPage" data-key="logistics" data-index="{{index}}">查看物流</view>
+						<view class="service orange" bind:tap="jumpPage" data-key="assess" data-index="{{index}}">去评价</view>
+					</block>
+				</order-item>
+			</block>
+
+					
+			<!-- <order-item wx:if="{{orderList.length>0}}" order="{{orderList[0]}}">
+				<view class="service" bind:tap="cancelOrder">取消订单</view>
+			</order-item>
+			<order-item wx:if="{{orderList.length>0}}" order="{{orderList[0]}}">
+				<view class="service" bind:tap="drawback">售后/退款</view>
+				<view class="service" bind:tap="">查看物流</view>
+				<view class="service" bind:tap="recOrder">确定收货</view>
+			</order-item>
+			<order-item wx:if="{{orderList.length>0}}" order="{{orderList[0]}}">
+				<view class="service" bind:tap="jumpPage" data-key="logistics">查看物流</view>
+				<view class="service" bind:tap="jumpPage" data-key="assess">去评价</view>
+			</order-item>
+			<order-item wx:if="{{orderList.length>0}}" order="{{orderList[0]}}">
+				<view class="service">再次购买</view>
+				<view class="service" bind:tap="jumpPage" data-key="assess">评价</view>
+			</order-item>
+			<order-item wx:if="{{orderList.length>0}}" order="{{orderList[0]}}">
+				<view class="service" bind:tap="deleteOrder">删除订单</view>
+				<view class="service" >再次购买</view>
+			</order-item>
+			<order-item wx:if="{{orderList.length>0}}" order="{{orderList[0]}}">
+			</order-item> -->
+
+		</scroll-view>
+	</swiper-item>
+
+	<!-- 待付款 -->
+	<swiper-item>
+		<scroll-view scroll-y='true'
+			bindscrolltolower="bindDownLoad1"
+		 bindscroll="scroll1"
+		 bindscrolltoupper="refresh" >
+
+			<view class="search_no" wx:if="{{!orderList1.length}}">
+				<view class="font_14">
+					<image class="scimg" src="/pages/static/icon/wuorder.png"></image>
+				</view>
+				<text>暂无订单</text>
+			</view>
+
+			<block wx:for="{{orderList1}}" wx:key="index">
+				<order-item order="{{item}}">
+					<block wx:if="{{item.order_status == 1}}">
+          <view  class='itembutton'>
+          						<view class="service" bind:tap="cancelOrder" data-index="{{index}}" data-id='{{item.id}}'>取消订单</view>
+						<view class="service orange" bind:tap="topay" data-index="{{index}}">去支付</view></view>
+
+					</block>
+				</order-item>
+			</block>	
+
+		</scroll-view>
+	</swiper-item>
+
+
+	<!-- 待发货 -->
+	<swiper-item>
+		<scroll-view scroll-y='true'
+			bindscrolltolower="bindDownLoad2"
+		 bindscroll="scroll2"
+		 bindscrolltoupper="refresh">
+			<view class="search_no" wx:if="{{!orderList2.length}}">
+				<view class="font_14">
+					<image class="scimg" src="/pages/static/icon/wuorder.png"></image>
+				</view>
+				<text>暂无订单</text>
+			</view>
+
+			<block wx:for="{{orderList2}}" wx:key="index">
+				<order-item order="{{item}}">
+					<view class="cancel_quxiao" bind:tap="cancelOrder1" data-id='{{item.id}}' data-index="{{index}}">取消订单</view>
+				</order-item>
+			</block>
+		</scroll-view>
+	</swiper-item>
+
+	<!-- 待收货-->
+	<swiper-item>
+			<scroll-view scroll-y='true'
+			bindscrolltolower="bindDownLoad3"
+		 bindscroll="scroll3"
+		 bindscrolltoupper="refresh">
+		<view class="search_no" wx:if="{{!orderList3.length}}">
+			<view class="font_14">
+				<image class="scimg" src="/pages/static/icon/wuorder.png"></image>
+			</view>
+			<text>暂无订单</text>
+		</view>
+
+		<block wx:for="{{orderList3}}" wx:key="index">
+			<order-item order="{{item}}">
+				<view class="shouhou" bindtap="drawback" data-index="{{index}}">售后/退款</view>
+				<view class="youpurch" bind:tap="jumpPage" data-key="logistics" data-index="{{index}}">查看物流</view>
+				<view class="service orange" data-index="{{index}}" bindtap="recOrder">确定收货</view>
+			</order-item>
+		</block>
+			</scroll-view>
+	</swiper-item>
+
+	<!--待评价 -->
+	<swiper-item>
+		<scroll-view scroll-y='true'
+			bindscrolltolower="bindDownLoad4"
+		 bindscroll="scroll4"
+		 bindscrolltoupper="refresh">
+		<view class="search_no" wx:if="{{!orderList4.length}}">
+			<view class="font_14">
+				<image class="scimg" src="/pages/static/icon/wuorder.png"></image>
+			</view>
+			<text>暂无订单</text>
+		</view>
+
+		<block wx:for="{{orderList4}}" wx:key="index">
+			<order-item order="{{item}}">
+				<view class="service" bindtap="gototest" data-index="{{index}}">查看物流</view>
+				<view class="service orange" bind:tap="jumpPage" data-key="assess" data-index="{{index}}">去评价</view>
+			</order-item>
+		</block>
+			</scroll-view>
+	</swiper-item>
+</swiper>
+
+<modal></modal>
+<view wx:if="{{islogin}}"   class="zhezhaoceng">
+  <view bindtap="close" class="CallShow" ></view>
+  <view class="zhezhaoone">
+    <view class="zhezhaotwo">
+    <view class="kefu_lianxi">售后申请</view>
+		<view class='info'>
+		<view>您确定已收货，并提交售后/退款申请</view>
+		<view bindtap="toPolicy">《源膳售后协议》</view>
+		</view>
+    <view class='btns'>
+     <view class='btn_sigin' bindtap="btncancel">取消</view>
+     <view class='btn_wechat' bindtap="btnconfirm">确定</view>
+    </view>
+</view>
+</view>
+</view>

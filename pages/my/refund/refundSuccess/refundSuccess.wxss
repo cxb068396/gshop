@@ -1,0 +1,166 @@
+/* pages/my/refund/refundSuccess/refundSuccess.wxss */
+.wrap{
+  width: 100%;
+  height: 100%;
+}
+.index-header{
+  width: 100%;
+  height: 160rpx;
+  position: relative;
+}
+.index-header-img{
+  width: 51rpx;
+  height: 51rpx;
+  margin-top: 47rpx;
+  margin-left: 29rpx;
+}
+.index-header-word{
+  font-size:28rpx;
+  color:rgba(34,34,34,1);
+  position: absolute;
+  left: 99rpx;
+  top: 51rpx;
+}
+.index-header-word1{
+  font-size:22rpx;
+  color:#888888;
+  position: absolute;
+  left: 100rpx;
+  top: 105rpx;
+}
+.index-black{
+  width: 100%;
+  height: 20rpx;
+  background-color: #f6f6f6;
+}
+.index-orderdetail{
+  width: 100%;
+  height: 135rpx;
+}
+.index-orderdetail-yellow{
+  display: inline-block;
+  width: 4rpx;
+  height: 24rpx;
+  background:rgba(246,199,92,1);
+  margin-top: 20rpx;
+  margin-left: 30rpx;
+  margin-right: 10rpx;
+}
+.index-orderdetail-text{
+  font-size:26rpx;
+  color:rgba(51,51,51,1);
+}
+.index-orderdetail-box{
+  margin-top: 22rpx;
+}
+.index-orderdetail-container{
+  width: 690rpx;
+  height: 60rpx;
+  margin: auto;
+}
+.orderdetail-container-text1{
+  font-size:22rpx;
+  color:rgba(136,136,136,1);
+  line-height: 60rpx;
+}
+.orderdetail-container-text2{
+  font-size:22rpx;
+  color:#FE4545;
+  line-height: 60rpx;
+  margin-left: 30rpx;
+}
+.colors{
+  font-size:22rpx;
+  color:rgba(254,69,69,1);
+  line-height: 60rpx;
+  margin-left: 30rpx;
+}
+/* 灰色块 */
+.black-one{
+  width: 100%;
+  height: 14rpx;
+  background-color: #f6f6f6;
+}
+/* 待退款图片 价格这些 */
+.index-message{
+  width: 100%;
+  height: 200rpx;
+  position: relative;
+}
+.index-message-img{
+  width: 140rpx;
+  height: 140rpx;
+  margin: 30rpx 29rpx 30rpx 30rpx;
+}
+.index-message-text{
+  font-size:26rpx;
+  color:rgba(34,34,34,1);
+  position: absolute;
+  top: 32rpx;
+}
+.index-message-text1{
+  font-size:24rpx;
+  color:rgba(136,136,136,1);
+  position: absolute;
+  right: 31rpx;
+  top: 33rpx;
+}
+.index-message-text2{
+  font-size:26rpx;
+  color:rgba(136,136,136,1);
+  position: absolute;
+  bottom: 30rpx;
+  right: 30rpx;
+}
+/* 灰色块 */
+.black-two{
+  width: 100%;
+  height: 10rpx;
+  background-color: #f6f6f6;
+}
+/* 退款原因  退款金额  申请时间  退款编号 */
+.index-bottom{
+  width: 100%;
+  height: 320rpx;
+}
+.index-bottom-one{
+  width: 690rpx;
+  height: 162rpx;
+  margin: auto;
+}
+.bottom-one-block{
+  width: inherit;
+  height: 80rpx;
+}
+.one-block-text{
+  font-size:26rpx;
+  color:#333333;
+  line-height: 80rpx;
+}
+.one-block-text1{
+  font-size:28rpx;
+  color:#888888;
+  line-height: 80rpx;
+}
+.lines{
+  width:690rpx;
+  height:1rpx;
+  background:rgba(242,242,242,1);
+  margin: auto;
+}
+.index-bottom-two{
+  width: 690rpx;
+  height: 118rpx;
+  margin: auto;
+}
+.index-bottom-two>text{
+  font-size:22rpx;
+  color:rgba(254,69,69,1);
+  line-height: 118rpx;
+}
+/* 灰色快 */
+.black-three{
+  width: 100%;
+  height: 650rpx;
+  background-color: #f6f6f6;
+}

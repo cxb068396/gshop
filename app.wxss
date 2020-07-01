@@ -1,0 +1,52 @@
+/**app.wxss**/
+@font-face {
+  font-family: 'FZSuXSLSJW';
+  src: url("http://omeals.cn/public/home/ziti/SourceHanSansCN-Bold.ttf") format('truetype')
+}
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.search_no{
+  width: 100%; 
+  display: block;
+  color: #666;
+  text-align: center;
+  font-size: 14px;
+}
+.scimg{
+  width: 100px;
+  height: 100px;
+  display: inline-block;
+  background-size:100px; 
+}
+
+/* --flex start-- 2020.06.08 杜晓东 */
+
+/* .flex{ display: flex;} */
+.flex-between{display: flex;justify-content: space-between; align-items: center;}
+.flex-around{display: flex;justify-content: space-around; align-items: center;}
+.flex-center{display: flex;justify-content: center; align-items: center;}
+.flex-start{display: flex;justify-content: flex-start; align-items: center;}
+.flex-end{display: flex;justify-content: flex-end; align-items: center;}
+
+.align-start{align-items: flex-start;}
+.align-end{align-items: flex-end;}
+.align-baseline{align-items: baseline;}
+.align-stretch{align-items: stretch;}
+/* .align-center{align-items: center;} */
+
+.flex-1{flex: 1;}
+.flex-2{flex: 2;}
+.flex-3{flex: 3;}
+.flex-4{flex: 4;}
+
+.column{ flex-direction: column;}
+
+/* --flex end-- */
+

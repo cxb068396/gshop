@@ -1,0 +1,23 @@
+function my_coupon(reduce) {
+  return parseInt(reduce);
+}
+
+function list(reduce,get_count, grant_num) {
+  var str = (reduce.get_count/reduce.grant_num)*100
+  return str
+}
+
+function oneself_coupon(arrList){
+  return parseInt(arrList);
+}
+
+function s_coupon(arrList){
+  return arrList.slice(0,-8)
+}
+
+module.exports = {
+  my_coupon: my_coupon,
+  list: list,
+  oneself_coupon: oneself_coupon,
+  s_coupon: s_coupon
+}

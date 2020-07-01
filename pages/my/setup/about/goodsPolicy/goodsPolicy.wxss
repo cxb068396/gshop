@@ -1,0 +1,50 @@
+/* pages/my/setup/about/goodsPolicy/goodsPolicy.wxss */
+page{
+  margin: 0;
+  padding: 0;
+}
+.sameOne{
+  width: 100%;
+  font-size:28rpx;
+  color:rgba(51,51,51,1);
+  line-height:48rpx;
+}
+.wrap{
+  width: 100%;
+}
+.wrap_container{
+  width: 90%;
+  margin: auto;
+}
+.wrap_container_one{
+  font-weight:400;
+  margin-top: 25rpx;
+}
+.wrap_container_four{
+  display: block;
+  font-size:32rpx;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  line-height:48rpx;
+  margin-top: 50rpx;
+  margin-left: 58rpx;
+}
+.wrap_container_two{
+  margin-top: 30rpx;
+  text-indent: 2em;
+}
+.dianFather{
+  position: relative;
+  text-indent: 3em;
+}
+.dian{
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background-color: #333;
+  display: inline-block;
+  margin-right: 10rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 67rpx;
+}

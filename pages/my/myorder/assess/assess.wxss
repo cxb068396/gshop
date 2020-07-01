@@ -1,0 +1,152 @@
+/* pages/my/myorder/assess/assess.wxss */
+page{
+  background-color: #eff3f7;
+
+}
+.index-wrap{
+  width: 100%;
+  height: 100%;
+}
+.index-header{
+  width: inherit;
+  height: 100rpx;
+  border-top: 1rpx solid #eff3f7 ;
+  border-bottom: 1rpx solid #eff3f7;
+  background-color: #fff;
+}
+.index-header-img{
+  width: 60rpx;
+  height: 60rpx;
+  margin-top: 19rpx;
+  margin-left: 30rpx;
+}
+.index-header-word{
+  font-size:28rpx;
+  color:rgba(0,34,34,1);
+  display: inline-block;
+  margin-left: 21rpx;
+  position: absolute;
+  top: 37rpx;
+}
+.index-header-starts{
+  display: inline-block;
+  width: 400rpx;
+  height: 30rpx;
+  position: absolute;
+  left: 240rpx;
+  top: 41rpx;
+}
+/* 第二大航，评价，照片 */
+.index-next{
+  width: 100%;
+  height: 470rpx;
+  border: 1rpx solid white;
+  background-color: #fff;
+}
+.index-next-box1{
+  width: 95%;
+  height: 243rpx;
+  margin: 36rpx auto;
+  margin-bottom: unset;
+}
+.index-next-word{
+  width: 92%;
+  height: 243rpx;
+  font-size: 28rpx;
+}
+/* 照片部分 */
+.index-next-box2{
+  width: 95%;
+  height: 160rpx;
+  margin: 20rpx auto;
+  display: flex;
+}
+.next-box2-pic{
+  position: relative;
+  display: inline-block;
+  width: 160rpx;
+  height: 160rpx;
+  border: 2rpx dashed #CDCDCD;
+  margin-right: 20rpx;
+  text-align: center;
+}
+.box2-pic-img{
+  width: 57rpx;
+  height: 47rpx;
+  margin: 38rpx 51rpx 10rpx 52rpx;
+}
+.box2-pic-text{
+  font-size:24rpx;
+  color:rgba(191,191,191,1);
+}
+/* 物流服务------发布 */
+.index-bottom{
+  width: 100%;
+  background-color: #eff3f7;
+  margin-top: 20rpx;
+  
+}
+.index-bottom-box{
+  width: 95%;
+  height: 30rpx;
+  position: relative;
+  top: 39rpx;
+  left: 20rpx;
+  margin-bottom: 23rpx;
+}
+.bottom-box-text{
+  font-size:24rpx;
+  color:rgba(0,34,34,1);
+  position: absolute;
+  top: -1rpx;
+  left: 0;
+}
+.bottom-box-vant{
+  position: absolute;
+  left: 130rpx;
+  top: -1rpx;
+}
+/* 发布 */
+.index-bottom-box1{
+  width: 690rpx;
+  height: 80rpx;
+  background-color: #F6C75C;
+  border-radius: 40rpx;
+  margin: 100rpx auto;
+  text-align: center;
+}
+.index-bottom-box1>text{
+  font-size:28rpx;
+  font-weight:bold;
+  color:rgba(255,255,255,1);
+  line-height: 80rpx;
+}
+
+.video-pic{
+  position: relative;
+  display: inline-block;
+  width: 160rpx;
+  height: 160rpx;
+  /* margin-right: 5rpx; */
+}
+.video{
+  display: inline-block;
+  width: 160rpx;
+  height: 160rpx;
+  border: 2rpx dashed #CDCDCD;
+  margin-right: 20rpx;
+  text-align: center;  
+}
+ .delete{
+  position: absolute;
+  top: -18rpx;
+  right:-18rpx;
+  width: 30rpx;
+  height: 30rpx;
+  font-size: 22rpx;
+  border-radius: 50%;
+  color: #fff;
+  background-color:rgb(246,199,92);
+  line-height: 26rpx;
+  text-align: center;
+}

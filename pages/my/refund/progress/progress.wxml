@@ -1,0 +1,64 @@
+<view style="height: 9rpx;background: #F6F6F6;"></view>
+<view class="progress-box">
+
+    <view class="progress-item">
+        <view class="left">
+            <view class="column-line up"></view>
+            <view class="ball"></view>
+            <view class="column-line down"></view>
+        </view>
+        <view class="right">
+            <view class="title">退款完成</view>
+            <view class="content">2020-5-10   12:32:14</view>
+        </view>
+    </view>
+
+    <view class="progress-item">
+        <view class="left">
+            <view class="column-line up"></view>
+            <view class="ball"></view>
+            <view class="column-line down"></view>
+        </view>
+        <view class="right">
+            <view class="title">支付账户已收到退款金额</view>
+            <view class="content">2020-5-10   12:32:14</view>
+        </view>
+    </view>
+
+    <view class="progress-item">
+        <view class="left">
+            <view class="column-line up"></view>
+            <view class="ball"></view>
+            <view class="column-line down"></view>
+        </view>
+        <view class="right">
+            <view class="title">后台审核通过，退款至原订单支付账户</view>
+            <view class="content">2020-5-10   12:32:14</view>
+        </view>
+    </view>
+
+    <view class="progress-item">
+        <view class="left">
+            <view class="column-line up"></view>
+            <view class="ball ball-pass"></view>
+            <view class="column-line line-pass down"></view>
+        </view>
+        <view class="right">
+            <view class="title">等待后台审核</view>
+            <view class="content">2020-5-10   12:32:14</view>
+        </view>
+    </view>
+
+    <view class="progress-item">
+        <view class="left">
+            <view class="column-line up"></view>
+            <view class="ball ball-pass"></view>
+            <view class="column-line line-pass down"></view>
+        </view>
+        <view class="right">
+            <view class="title now">发起退款申请</view>
+            <view class="content">2020-5-10   12:32:14</view>
+        </view>
+    </view>
+
+</view>

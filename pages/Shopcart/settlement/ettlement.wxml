@@ -1,0 +1,88 @@
+<!-- 地址 -->
+<view class="cart_address"   bindtap="toaddress">
+   <image class="cart_shopimg"  src="../../static/icon/btn_position.png" ></image>
+   <view class="cart_allname" >
+      <view class="cart_con">
+        <text class="cart_name" >{{address.name}}</text> <text style="width:10rpx" ></text>
+         <text class="cart_call" >{{address.mobile}}</text>
+      </view>
+      <view class="address">{{address.province}}{{address.city}}{{address.county}}{{address.area}}</view>
+   </view>
+   <image class="cart_btnimg"  src="../../static/icon/btn_gai_n.png" ></image>
+</view>
+<view class="ment_order">
+<view class="seat"></view>
+<text>您的订单</text>
+</view>
+<!-- 订单 -->
+<block wx:for="{{carts}}" wx:for-item="item" wx:for-index="idx"  >
+<view data-id="{{item.id}}" class="order1">
+   <image class="order_shopimg" src="{{item.main_images}}" ></image>
+   <view class="order_sku">
+      <!-- 标题 -->
+      <text class="order_title" >{{item.title}} </text>
+      <!-- 活动名称 -->
+      <text class="order_activity">{{item.description}}</text>
+      <!-- 单价 -->
+      <text class="order_price">￥{{item.sell_price ||item.price}} </text>
+   </view>
+   <!-- 加减 -->
+   <view class="stepper">    
+    <text data-index="{{idx}}" class="{{minusStatus}}" bindtap="bindMinus">-</text>  
+    <input data-index="{{idx}}" type="number" disabled="true" bindchange="bindManual" value="{{item.num}}" />  
+    <text data-index="{{idx}}" class="normal" bindtap="bindPlus">+</text>  
+    </view>  
+</view>
+</block>
+<view class="cart_xf" >
+    <text class="ment_nim" >共{{carts[0].num}}件</text>
+    <text class="cart_xf_total" >合计:  <text class="cart_xf_jiage" >￥{{payment}}</text>    </text>
+    <view bindtap="topayment"   class="settlement" >提交订单</view>
+</view>
+<!-- 结算详情 -->
+<view style="margin-top:10rpx"  class="ment_per" >
+<view class="ment_perone">
+<text class="ment_text">订单总额:</text>
+<text class="discount" >￥{{totalPrice}}</text>
+</view>
+</view>
+
+<view  class="ment_per" >
+<view class="ment_perone">
+<text class="ment_text" >优惠券:</text>
+<text class="discount discountow" bind:tap="navigateToCoupon">-￥{{discount}}</text>
+<image class="ment_jiantou" src="/pages/static/icon/jiantou.png" bind:tap="navigateToCoupon"></image>
+</view>
+</view>
+
+<view  class="ment_per" >
+<view class="ment_perone">
+<text class="ment_text" >运费:</text>
+<text style="color:#888888;font-size:28rpx" class="discount" >￥{{freight}}</text>
+</view>
+</view>
+
+<view  class="ment_per" >
+<view class="ment_perone">
+<text class="ment_text" >订单备注:</text>
+<input bindinput="bindin" class="ment_inp" value="{{remark}}"  type="text" placeholder="请输入备注内容" placeholder-style="color:#cdcdcd;"  ></input>
+</view>
+</view>
+
+<view style="margin-top:15rpx"  class="ment_per" >
+<view class="ment_perone">
+<text class="ment_text" >支付金额:</text>
+<text class="discount" >￥{{payment}}</text>
+</view>
+</view>
+
+<view class="ment_pertwo" >
+<text>优惠券抵扣:</text>
+<text >￥{{discount}}</text>
+</view>
+<view class="ment_pertwo" >
+<text>运费:</text>
+<text>￥{{freight}}</text>
+</view>
+
+<view class="zhanwei" ></view>

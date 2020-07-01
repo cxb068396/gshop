@@ -1,0 +1,61 @@
+<view class="eat_container">
+<view>
+	<view>
+		<view class="weui-search-bar">
+			<view class="weui-search-bar__form">
+				<!-- 搜索框 -->
+					<navigator class="weui-search-bar__box" url="/pages/eatwhat/search/search" hover-class="none">
+					<image bindtap='a' class="weui-icon-search_in-box" src="../static/icon/img_icon1.png"></image>
+					<input type="text" class="weui-search-bar__input" placeholder="搜索季节、菜谱"  disabled="true"/>
+				</navigator>
+			</view>
+		</view>
+	</view>
+</view>
+
+<view class="eat_c">
+	<view class="eat_zhanwei"></view>
+	<view class="eat_cj">{{name}}</view>
+</view>
+
+<view class="eat_center">
+
+	<view wx:for="{{contents}}" data-id="{{item.id}}" wx:key="index"  bindtap="toeatcaipu" class="eat_cenone">
+		<image class="eat_cimg" src="{{item.picture}}"></image>
+		<view class="eat_ctext">{{item.name}}</view>
+	</view>
+</view>
+
+<!-- 推荐 -->
+<view class="eat_c">
+	<view class="eat_zhanwei"></view>
+	<view class="eat_cj">当前推荐</view>
+</view>
+
+
+<view class="eat_wai">
+	<view class="eat_bag">
+		<view class="eat_biaoti">推荐美食红酒蛋炒饭：适合一个人吃的美味</view>
+		<view class="eat_neir">炒饭是大家比较喜欢吃的食物，因为其制作简单，方便而收到家喜欢，会有多惊喜！色彩斑斓、清香馥郁、口感湿润，奶油香滑细腻，颜值与才华兼具</view>
+		<image class="eat_bgimg" src="/pages/static/icon/tp_758.png"></image>
+		<view class="eat_time">27分钟之前</view>
+		<view class="eat_user">
+			<image class="eat_usertoux" src="/pages/static/icon/tp_758.png"></image>
+			<view class="eat_username">Brenda Godinez</view>
+		</view>
+	</view>
+</view>
+
+<view class="eat_wai">
+	<view class="eat_bag">
+		<view class="eat_biaoti">推荐美食红酒蛋炒饭：适合一个人吃的美味</view>
+		<view class="eat_neir">炒饭是大家比较喜欢吃的食物，因为其制作简单，方便而收到家喜欢，会有多惊喜！色彩斑斓、清香馥郁、口感湿润，奶油香滑细腻，颜值与才华兼具</view>
+		<image class="eat_bgimg" src="/pages/static/icon/tp_758.png"></image>
+		<view class="eat_time">27分钟之前</view>
+		<view class="eat_user">
+			<image class="eat_usertoux" src="/pages/static/icon/tp_758.png"></image>
+			<view class="eat_username">Brenda Godinez</view>
+		</view>
+	</view>
+</view>
+</view>

@@ -1,0 +1,28 @@
+<wxs src="../../../../utils/coupon.wxs" module="tools"/>
+<!--pages/my/setup/register/register.wxml-->
+<view class="wrap">  
+  <!--遮罩层  -->
+  <view class="shade">  
+    <!--面板内容  -->
+    <view class="conts">  
+       <image class="conts_img" src="../../../static/icon/re_banner.png"></image>
+       <view class="conts_newPeople">新人专享</view>
+       <view class="conts_more">更多优惠劵可在 我的-优惠券-中查看</view>
+       <view class="conts_box" wx:for="{{reduce}}" wx:key="index">
+          <image class="conts_box_img" src="../../../../pages/static/icon/1.png"></image>
+          <view class="noUse-imgwords"><text>￥</text>{{tools.my_coupon(item.minus)}}</view>
+          <view class="noUse-imgwordsone">{{item.coupon_name}}</view>
+          <view class="noUse-imgwordstwo">无门槛限制</view>
+          <view class="noUse-imgwordsthree" wx:if="{{item.valid_time == null}}"><text>有效期只有{{item.valid_date}}天</text></view>
+          <view class="noUse-imgwordsthree" wx:else><text>{{item.valid_time}}前有效</text></view>
+          <view class="conts_goUse">
+            <text>去使用</text>
+          </view>
+       </view>
+       <view class="conts_lookMore" bindtap="toMore">查看更多
+        <image class="conts_lookMore_img" src="../../../static/icon/yousanjiaoxing.png"></image>
+       </view>
+      <image class="closeImg" src="../../../static/icon/error.png" bindtap="close"></image>  
+    </view>   
+  </view>  
+</view>    

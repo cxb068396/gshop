@@ -1,0 +1,8 @@
+{
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "评价",
+  "navigationBarTextStyle": "black",
+  "usingComponents": {
+    "van-rate": "/miniprogram_npm/@vant/weapp/rate/index"
+  }
+}

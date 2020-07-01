@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "modal": "/pages/components/modal/index"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "我的订单",
+  "navigationBarTextStyle": "black"
+}

@@ -1,0 +1,28 @@
+<!--pages/my/setup/login/login.wxml-->
+<!-- 外面的大盒子 -->
+<view class="wrap">
+  <view class="black"></view>
+  <!-- 手机号  验证码 -->
+  <view class="index-container">
+    <view class="login-phone">
+      <input type='number' bindinput="phoneInput" maxlength="11" placeholder="输入手机号" placeholder-style="color:#cdcdcd"></input>
+    </view>
+    <view class="login-phone">
+      <input type="number" placeholder="输入验证码" bindinput="codeInput" placeholder-style="color:#cdcdcd" disabled="{{disabled}}"></input>
+      <view class="login-yzm" wx:if='{{hidden}}' bindtap='textCode'>{{codemsg}}</view>
+       <view wx:else class="login-yzm">{{codemsg}}</view>
+    </view>
+  </view>
+
+  <!-- 完成按钮 -->
+  <view class="login-over" bindtap="goLogin">完成</view>
+  <!-- 其他方式登录 -->
+  <view class="login-text">其他方式登录</view>
+  <!-- 微信 -->
+  <image class="login-img" src="/pages/static/icon/WeChat.png" bindtap="weixinLogin"></image>
+  <!-- 协议----- -->
+  <view class="login-box">
+    <view class="login-box-text1">若手机号码未注册过，则默认登录时注册并同意</view>
+    <view class="login-box-text2">《源膳注册协议》</view>
+  </view>
+</view>

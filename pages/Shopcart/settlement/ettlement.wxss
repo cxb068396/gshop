@@ -1,0 +1,109 @@
+@import "../Shopcart.wxss";
+
+.ment_order{
+  width: 100%;
+  height: 50rpx;
+  border: 1px solid #ffffff;
+  position: relative;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  line-height: 50rpx;
+  background: #ffffff;
+  margin-top: 20rpx;
+}
+.seat{
+  width: 4rpx;
+  height: 24rpx;
+  background: #f6c75c;
+  position: relative;
+  top: 50%;
+  margin-top: -12rpx;
+}
+.ment_order text{
+  font-size: 26rpx;
+  color: #333333;
+  margin-left: 15rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 0px;
+}
+.order1{
+  height: 220rpx;
+  background: #ffffff;
+  display: flex;
+  position: relative;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  justify-content: space-between;
+
+}
+.ment_nim{
+   font-size: 24rpx;
+   color: #cdcdcd;
+   width: 100rpx;
+   position: relative;
+   left: 30%;
+}
+.ment_per{
+  background: #ffffff;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: relative;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+.ment_pertwo{
+  background: #ffffff;
+  width: 100%;
+  height: 60rpx;
+  line-height: 60rpx;
+  position: relative;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  font-size: 24rpx;
+  color: #888888;
+}
+.ment_perone{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f6f6f6;
+  display: flex;
+  justify-content: space-between;
+}
+.ment_jiantou{
+  width:16rpx;
+  height: 28rpx;
+  position: relative;
+  top: 50%;
+  margin-top: -14rpx;
+}
+.discount{
+  font-size: 28rpx;
+  color: #fe4545;
+}
+.discountow{
+  margin-left: 70%;
+}
+.ment_text{
+  font-size: 26rpx;
+  color: #333333;
+}
+.ment_inp{
+  width: 75%;
+  height: 60rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 30rpx;
+  color: #888888;
+  font-size: 26rpx;
+}
+.zhanwei{
+  width: 100%;
+  height: 100rpx;
+}

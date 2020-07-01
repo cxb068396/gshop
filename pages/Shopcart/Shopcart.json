@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-swipe-cell": "/miniprogram_npm/@vant/weapp/swipe-cell/index"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "购物车",
+  "navigationBarTextStyle": "black"
+}

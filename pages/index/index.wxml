@@ -1,0 +1,68 @@
+<view>
+	<view>
+		<view class="weui-search-bar">
+			<view class="weui-search-bar__form">
+				<!-- 搜索框 -->
+				<navigator class="weui-search-bar__box" url="/pages/index/search/search" hover-class="none">
+					<image bindtap='a' class="weui-icon-search_in-box" src="../static/icon/img_icon1.png"></image>
+					<input type="text" class="weui-search-bar__input" placeholder="请输入关键词搜索" disabled='true'/>
+				</navigator>
+			</view>
+
+		</view>
+	</view>
+</view>
+
+
+<view class="cenlun">
+	<!--轮播图-->
+	<swiper class='lunbo v115-class-goods-scroll' previous-margin='0px' indicator-dots='true' autoplay='true' interval='4000'>
+		<swiper-item>
+			<image src='https://omeals.cn/public/home/images/wximage/pic_banner.png'></image>
+		</swiper-item>
+		<swiper-item>
+			<image src='https://omeals.cn/public/home/images/wximage/pic_banner.png'></image>
+		</swiper-item>
+		<swiper-item>
+			<image src='https://omeals.cn/public/home/images/wximage/pic_banner.png'></image>
+		</swiper-item>
+		<swiper-item>
+			<image src='https://omeals.cn/public/home/images/wximage/pic_banner.png'></image>
+		</swiper-item>
+	</swiper>
+</view>
+<!-- 分割线 -->
+<view class="fenge1"></view>
+<!-- 人气产品 -->
+<view class="popularity">
+	<view class="popularity-fix">
+		<view class="rqshu"></view>
+		<text class="popu-tex">人气产品</text>
+	</view>
+</view>
+
+<view class="product">
+	<view class="product-fx">
+
+		<block wx:for="{{imgsrc}}" wx:for-item="item" wx:key="index">
+			<view class="product-jus">
+				<image data-id="{{item.id}}" bindtap="toshopbap" class="product-fx-img" src="{{item.main_images}}"></image>
+				<text style="font-size:26rpx" >{{item.title}}</text>
+				<view class="product-jus-price">
+					<view>
+						<view class="original ">￥<text>{{item.opening_price}}</text></view>
+						<view class="original-discount">￥<text>{{item.sell_price}}</text></view>
+					</view>
+					<image data-id="{{item.id}}"  bindtap="pushchat"  class="product-jus-addition" src="{{currentItem==item.id?'../static/icon/jia_two.png':'../static/icon/btn_icon_n.png'}}"></image>
+					<!-- <image data-id="{{item.id}}"  bindtap="pushchat" wx:if="{{clicks}}" class="product-jus-addition" src="../static/icon/btn_icon_n.png"></image>
+					<image data-id="{{item.id}}" bindtap="pushchat" wx:else class="product-jus-addition" src="../static/icon/jia_two.png"></image> -->
+				</view>
+			</view>
+
+		</block>
+		<view class="product-jus"></view>
+		<view class="product-jus"></view>
+		<view class="product-jus"></view>
+
+	</view>
+</view>

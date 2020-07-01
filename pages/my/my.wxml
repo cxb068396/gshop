@@ -1,0 +1,100 @@
+<view class="my_heard">
+ <image   class='avatar' src='{{userInfo.avatar}}' ></image>
+ <image wx:if="{{isShown}}" class='avatar' src="/pages/static/icon/ren_tou.png" ></image>
+ <text  class="my_name">{{userInfo.username}}</text>
+ <button wx:if="{{isShown}}"  style='border:0;background:none;font-size:28rpx;color: #666666;width:700rpx' class='my_wsign' type='primary'   bindtap='goLogin'>未登录</button>
+  <text  class="my_member">{{userInfo.vip}}</text>
+ <view  wx:if="{{!isShown}}" bindtap="toedit" class="my_wsbianji">
+  <image class="my_imgbj" src="/pages/static/icon/bianji.png"></image>
+  <text style="margin-left:10rpx">编辑</text>
+ </view>
+</view>
+
+<view  class="personal" >
+<text class="personal_texo" >我的订单:</text>
+<text bindtap="tomyorder" data-currentTab="0" class="personal_two" >全部订单</text>
+<image bindtap="tomyorder" data-currentTab="0" class="toAllorder" src="/pages/static/icon/jiantou.png" ></image>
+</view>
+
+<view class="allorder">
+  <view bindtap="tomyorder" data-currentTab="1" class="dib">
+    <image class="btn_fukuan" src="/pages/static/icon/btn_fukuan.png" ></image>
+    <view>待付款</view>
+  </view>
+  <view bindtap="tomyorder" data-currentTab="2" class="dib">
+    <image class="btn_fukuan" src="/pages/static/icon/btn_daifa.png" ></image>
+    <view>待发货</view>
+  </view>
+  <view bindtap="tomyorder" data-currentTab="3" class="dib">
+    <image class="btn_fukuan" src="/pages/static/icon/btn_daishou.png" ></image>
+    <view>待收货</view>
+  </view>
+  <view bindtap="tomyorder" data-currentTab="4" class="dib">
+    <image class="btn_fukuan" src="/pages/static/icon/btn_pinjia.png" ></image>
+    <view>待评价</view>
+  </view>
+  <view bindtap="torefund" class="dib">
+    <image class="btn_fukuan" src="/pages/static/icon/btn_shouhou.png" ></image>
+    <view>退款/售后</view>
+  </view>
+</view>
+
+<view style="margin-top:20rpx"  class="personal" >
+<text class="personal_texo" >我的服务</text>
+</view>
+
+<view class="allorder">
+  <view bindtap="tocoupon" class="dib">
+    <image class="btn_fukuan" src="/pages/static/icon/btn_quan.png" ></image>
+    <view>优惠券</view>
+  </view>
+  <view class="dib" bindtap='assemble'>
+    <image class="btn_fukuan" src="/pages/static/icon/btn_tuan.png" ></image>
+    <view>拼团</view>
+  </view>
+  <view bindtap="tosetup" class="dib">
+    <image class="btn_fukuan" src="/pages/static/icon/btn_shezhi.png" ></image>
+    <view>设置</view>
+  </view>
+  <view bindtap="dial" class="dib">
+    <image class="btn_fukuan" src="/pages/static/icon/btn_kefu.png" ></image>
+    <view>客服中心</view>
+  </view>
+  <view class="dib">
+    <!-- <image class="btn_fukuan" src="###" ></image> -->
+    <view>   </view>
+  </view>
+</view>
+
+
+<!-- 客服中心 -->
+
+<view wx:if="{{kefuShow}}"   class="zhezhaoceng">
+  <view bindtap="CallShow" class="CallShow" ></view>
+  <view class="zhezhaoone">
+    <view class="zhezhaotwo">
+    <view class="kefu_lianxi">联系客服</view>
+    <view class="kefu_lione">
+    <image  src="/pages/static/icon/call_n.png" ></image>
+    <view class="kefu_call">400-100-2720</view>
+    <view class="kefu_time">全国统一客服热线 工作日(9：30-16：30)</view>
+    </view>
+  <view class="kefu_dial" bindtap="timcall" >立即拨打</view>
+</view>
+</view>
+</view>
+<view wx:if="{{islogin}}"   class="zhezhaoceng">
+  <view bindtap="close" class="CallShow" ></view>
+  <view class="zhezhaoone">
+    <view class="zhezhaotwo">
+    <view class="kefu_lianxi">您还未注册/登录源膳账户</view>
+    <view class='btns'>
+     <view class='btn_sigin' bindtap="goRegister">注册/登录</view>
+     <view class='btn_wechat' bindtap="goWechatLogin">微信授权登录</view>
+    </view>
+</view>
+</view>
+</view>
+
+
+

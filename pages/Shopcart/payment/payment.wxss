@@ -1,0 +1,288 @@
+@import "../Shopcart.wxss";
+.payment_header{
+  width: 100%;
+  height: 160rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  line-height: 160rpx;
+  position: relative;
+  background: #ffffff;
+}
+.payment_header image{
+  width: 49rpx;
+  height: 49rpx;
+  position: absolute;
+  top: 56rpx;
+}
+.payment_tishi{
+  position: absolute;
+  top: 35rpx;
+  left: 100rpx;
+  font-size: 22rpx;
+  color: #fe4545;
+}
+.payment_tishione{
+  margin-left: 70rpx;
+  font-size: 28rpx;
+  color: #222222;
+}
+.ment_order{
+  width: 100%;
+  height: 50rpx;
+  border: 1px solid #ffffff;
+  position: relative;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  line-height: 50rpx;
+  background: #ffffff;
+  margin-top: 20rpx;
+}
+.seat{
+  width: 4rpx;
+  height: 24rpx;
+  background: #f6c75c;
+  position: relative;
+  top: 50%;
+  margin-top: -12rpx;
+}
+.ment_order text{
+  font-size: 26rpx;
+  color: #333333;
+  margin-left: 15rpx;
+  height: 50rpx;
+  position: absolute;
+  top: 0px;
+}
+.payment_he{
+  background: #ffffff;
+  width: 100%;
+  height: 80rpx;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  line-height: 80rpx;
+  border-bottom: 1rpx solid #f6f6f6;
+}
+
+.payment_two{
+  background: #ffffff;
+  width: 100%;
+  height: 126rpx;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  line-height: 80rpx;
+  position: relative;
+}
+.payment_dizhi{
+  position: absolute;
+  left: 30rpx;
+  top: 40rpx;
+  font-size: 22rpx;
+  color: #888888;
+}
+.payment_he_hao{
+  font-size: 22rpx;
+  color: #888888;
+}
+.orde_unmdf{
+  line-height: 340rpx;
+  font-size: 26rpx;
+  color: #888888;
+}
+.ment_per{
+  background: #ffffff;
+  width: 100%;
+  height: 80rpx;
+  line-height: 80rpx;
+  position: relative;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+}
+.ment_perone{
+  width: 100%;
+  height: 100%;
+  box-sizing: border-box;
+  border-bottom: 1rpx solid #f6f6f6;
+  display: flex;
+  justify-content: space-between;
+}
+.ment_text{
+  font-size: 26rpx;
+  color: #333333;
+}
+.discount{
+  font-size: 28rpx;
+  color: #fe4545;
+} 
+.discountow{
+  margin-left: 60%;
+  color:#888888 ;
+}
+.ment_jiantou{
+  width:16rpx;
+  height: 28rpx;
+  position: relative;
+  top: 50%;
+  margin-top: -14rpx;
+}
+.pay_time{
+  background: #ffffff;
+  height: 102rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  line-height: 102rpx;
+  color: #fe4545;
+  font-size: 22rpx;
+}
+.pay_tobbom{
+  height: 120rpx;
+  background: #ffffff;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+}
+.pay_quxiao{
+  width: 220rpx;
+  height: 60rpx;
+  border-radius: 24rpx;
+  border: 1px solid #CDCDCD;
+  color: #888888;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 60rpx;
+  position: absolute;
+  top: 30rpx;
+  right: 270rpx;
+}
+.pay_tofuk{
+  width: 220rpx;
+  height: 60rpx;
+  border-radius: 24rpx;
+  border: 1px solid #F5AE32;
+  color: #F5AE32;
+  font-size: 24rpx;
+  text-align: center;
+  line-height: 60rpx;
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+}
+
+/* 支付金额 支付方式 剩余支付时间 这些 */
+.index-bottom {
+  width: 100%;
+  height: 244rpx;
+  background-color: white;
+}
+
+.index-bottom-one {
+  width: 690rpx;
+  height: 165rpx;
+  border-bottom: 1rpx solid #F2F2F2;
+  margin: auto;
+}
+
+.bottom-one-box {
+  padding-top: 20rpx;
+  box-sizing: border-box;
+}
+
+.bottom-word {
+  font-size: 26rpx;
+  color: rgba(51, 51, 51, 1);
+}
+
+.bottom-one-box1 {
+  padding-top: 8rpx;
+  box-sizing: border-box;
+}
+
+.bottom-word1 {
+  font-size: 28rpx;
+  color: rgba(136, 136, 136, 1);
+  float: right;
+}
+
+.bottom-words {
+  color: #888888;
+  font-size: 28rpx;
+}
+
+.index-bottom-two {
+  width: 690rpx;
+  height: 78rpx;
+  margin: auto;
+  text-align: right;
+}
+
+.index-bottom-two>text {
+  font-size: 22rpx;
+  color: rgba(254, 69, 69, 1);
+  line-height: 78rpx;
+}
+
+.con {
+  color: #333333;
+}
+
+/* 灰色 */
+.black{
+  width: 100%;
+  height: 10rpx;
+  background-color: #f6f6f6;
+}
+
+/* 三个 */
+.index-bcon {
+  width: 100%;
+  /* height: 418rpx; */
+  position: relative;
+  background-color: white;
+}
+
+.index-bcon-box {
+  width: 690rpx;
+  /* height: 369rpx; */
+  margin: auto;
+}
+
+.bcon-box {
+  width: inherit;
+  height: 60rpx;
+  border-bottom: 1rpx solid #f2f2f2;
+}
+
+.bcon-box-word {
+  line-height: 60rpx;
+  font-size: 22rpx;
+  color: rgba(136, 136, 136, 1);
+  display: inline-block;
+}
+
+.bcon-box-con {
+  display: inline-block;
+  line-height: 60rpx;
+  font-size: 22rpx;
+  color: rgba(136, 136, 136, 1);
+  margin-left: 25rpx;
+}
+
+.showmore {
+  width: 27rpx;
+  height: 23rpx;
+  position: absolute;
+  left: calc(50% - 13rpx);
+  bottom: -10rpx;
+}
+
+
+scroll-view{
+  height: 100%;
+}

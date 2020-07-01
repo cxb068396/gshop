@@ -1,0 +1,6 @@
+<!--pages/my/setup/about/about.wxml-->
+<view class="wrap">
+  <image class="index-headImg" src="/pages/static/icon/logo.png" bindtap="toRegister"></image>
+  <view class="index-two" bindtap="toPrivacyAgreement">《隐私协议》</view>
+  <view class="index-three" bindtap="toUserAgreement">《用户注册协议》</view>
+</view>

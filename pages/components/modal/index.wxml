@@ -1,0 +1,16 @@
+<view class="modal-mask" bindtap="hideModal" catchtouchmove="preventTouchMove" wx:if="{{show}}"></view>
+<view class="modal-dialog" wx:if="{{show}}">
+	<view class="modal-title">{{title}}</view>
+	<view class="modal-content">
+		<view class="modal-input">
+        <block wx:if="{{content.length>0}}">
+            <view bindinput="inputChange" class="input" wx:for="{{content}}">{{item}}</view>
+        </block>
+        <slot></slot>
+		</view>
+	</view>
+	<view class="modal-footer">
+		<view class="btn-cancel" bind:tap="hideModal" data-status="cancel">{{cancelText}}</view>
+		<view class="btn-confirm" bindtap="onConfirm" data-status="confirm">{{confirmText}}</view>
+	</view>
+</view>

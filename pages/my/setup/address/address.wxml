@@ -1,0 +1,23 @@
+<view class="noaddress_conter" wx:if="{{ str.length === 0 }}">
+    <image class="noaddress_conter_img" src="/pages/static/icon/no_address.png"></image>
+    <text>还没有写过收获地址哟</text>
+</view>
+<scroll-view scroll-y='true'>
+<view class='address_container'>
+<view class="address_conter" wx:elseif=" {{ str.length >= 1 }} " data-index="{{index}}" data-id="{{id}}" wx:for="{{str}}" wx:key="id" bindtouchstart="touchstart" bindtouchmove="touchmove" bindtouchend="touchend" 
+	style="transform:translateX({{item.left}}rpx)"  bindtap="tochose">
+    <image wx:if='{{item.is_default==1}}' class="address_img" src="../../../static/icon/btn_position.png" ></image>
+     <image wx:else class="address_img" src="/pages/static/icon/dingwei_a.png" ></image>
+    <view class="address_name">{{item.name}}</view>
+    <view class="address_call">{{item.mobile}}</view>
+    <view class="address_addre">{{item.province}}{{item.city}}{{item.county}}{{item.area}}</view>
+    <image wx:if='{{item.is_default}}' class="addres_moren" src="{{item.defaultImg}}"></image> 
+    <view class="address_bianji">编辑</view>
+    <view class="del-btn" data-id="{{item.id}}" catchtap="scrollDel">删除</view>
+</view>
+</view>
+</scroll-view>
+
+<view class="address_to">
+   <view bindtap="toeditaddres" class="address_tozi">添加收货地址</view>
+</view>

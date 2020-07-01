@@ -1,0 +1,53 @@
+<!--pages/my/refund/refundSuccess/refundSuccess.wxml-->
+<!-- 外面大盒子 -->
+<view class="wrap">
+  <!-- 待支付logo 倒计时 -->
+  <view class="index-header">
+    <image class="index-header-img" src="/pages/static/icon/icon.png"></image>
+    <text class="index-header-word">退款成功</text>
+    <text class="index-header-word1">2020-04-21 10:30:09</text>
+  </view>
+  <!-- 灰色的 -->
+  <view class="index-black"></view>
+  <!-- 退款详情 -->
+  <view class="index-orderdetail">
+    <!-- 黄色块 -->
+    <view class="index-orderdetail-yellow"></view>
+    <text class="index-orderdetail-text">退款详情：</text>
+    <view class="index-orderdetail-box">
+    <view class="index-orderdetail-container">
+      <text class="orderdetail-container-text1">退款总金额：</text>
+      <text class="orderdetail-container-text2">￥50.00</text>
+    </view>
+    </view>
+  </view>
+  <!-- 灰色块 -->
+  <view class="black-one"></view>
+  <!-- 待支付图片 价格这些 -->
+  <view class="index-message">
+    <image class="index-message-img" src="/pages/static/icon/caipu_3.png"></image>
+    <text class="index-message-text">源膳富硒绿壳鸡蛋</text>
+    <text class="index-message-text1">￥150.00</text>
+    <text class="index-message-text2">x1</text>
+  </view>
+  <!-- 灰色块 -->
+  <view class="black-two"></view>
+  <!-- 支付金额  支付方式 剩余支付时间 -->
+  <view class="index-bottom">
+    <view class="index-bottom-one" wx:for="{{refundList}}" wx:key="index">
+      <view class="bottom-one-block">
+        <text class="one-block-text">{{item.word_one}}</text>
+        <text class="one-block-text1">{{item.word_two}}</text>
+      </view>
+      <view class="bottom-one-block">
+        <text class="one-block-text">{{item.word_three}}</text>
+        <text class="one-block-text1">{{item.word_four}}</text>
+      </view>
+      <!-- 灰线 -->
+      <view class="lines"></view>
+    </view>
+  </view>
+  <!-- 灰色块 -->
+  <view class="black-three"></view>
+</view>
+

@@ -1,0 +1,387 @@
+/* pages/user/dingdan.wxss */
+.swiper-tab{  
+  width: 100%;  
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  height: 80rpx;
+  line-height: 80rpx;
+  background: #fff;  
+  position: fixed;
+  top: 0;   
+  z-index: 999;
+  }  
+.swiper-tab-list{  
+font-size: 24rpx;  
+display: inline-block;   
+color: #666;  
+height: 70rpx;
+}   
+.on{ 
+color: #F6C75C;  
+border-bottom: 5rpx solid #F6C75C;
+}  
+
+.swiper-box{ 
+display: block; 
+height: 100%; 
+width: 100%; 
+overflow: hidden; 
+}  
+
+.clearbutton{
+  background: #fff; 
+  display: inline-block;
+  margin:3% 3% 2% 3%; 
+  color: #dd2727;
+  font-size: 14px;
+  width: 94%;
+}
+.shop{
+  background: #fff;
+  margin-bottom: 10px;
+  height: 326rpx;
+  position: relative;
+}
+.shop checkbox{ 
+  margin-top: 27px;
+  }
+.sh_slt{
+  width: 110rpx;
+  height: 110rpx;
+  position: absolute;
+  top: 33rpx;
+}
+.sh_dingsh_red{
+  color: #FE4545;
+}
+.sp_tit{
+  position: absolute;
+  top: 33rpx;
+  left: 152rpx;
+  color: #666666;
+  font-size: 26rpx;
+}
+.sp_neb{
+  color: #CDCDCD;
+  font-size: 24rpx;
+  position: absolute;
+  top: 33rpx;
+  right: 30rpx;
+}
+.sp_procoubt{
+  color: #CDCDCD;
+  font-size: 22rpx;
+  position: absolute;
+  top: 65rpx;
+  right: 30rpx;
+}
+.sp_jjsp{
+color: #666666;
+font-size: 22rpx;
+position: absolute;
+right: 210rpx;
+bottom: 33rpx;
+}
+.sp_jg{
+ font-size: 22rpx;
+ color: #666666;
+ position: absolute;
+ bottom: 33rpx;
+ right: 30rpx;
+}
+.dle{
+  color: #999;
+}
+.shouhou{
+  width: 160rpx;
+  height: 48rpx;
+  border: 1rpx solid #CDCDCD;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 24rpx;
+  position: absolute;
+  bottom: 20rpx;
+  left: 210rpx;
+  color: #888888;
+  font-size: 24rpx;
+}
+.youpurch{
+  width: 160rpx;
+  height: 48rpx;
+  border: 1rpx solid #CDCDCD;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 24rpx;
+  position: absolute;
+  bottom: 20rpx;
+  right: 210rpx;
+  color: #888888;
+  font-size: 24rpx;
+}
+.cancel{
+  width: 160rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 24rpx;
+  position: absolute;
+  bottom: 20rpx;
+  right: 30rpx;
+  color: #F5AE32;
+  border: 1rpx solid #F5AE32;
+  font-size: 24rpx;
+}
+.cancel_quxiao{
+  width: 160rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 24rpx;
+  position: absolute;
+  bottom: 20rpx;
+  right: 30rpx;
+  color: #888888;
+  border: 1rpx solid #CDCDCD;
+  font-size: 24rpx;
+}
+.service{
+  width: 160rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 24rpx;
+  /* position: absolute;
+  bottom: 20rpx;
+  right: 400rpx; */
+  color: #888888;
+  border: 1rpx solid #CDCDCD;
+  font-size: 24rpx;
+}
+.dle image{
+  width: 18px;
+  height: 18px;
+  vertical-align: sub;
+}
+.jk_bottom{
+  position: fixed;
+  bottom: 0;
+  background: #fff;
+  width: 100%; 
+  display: inline-flex;
+  border-bottom: 1px solid #eee; 
+  font-size: 14px;
+  color: #999;       
+}
+.jk_bottom checkbox{
+  margin: 4% 0 4% 4%;    
+}
+.jk_bottom .heji{
+  margin-top: 5.5%;
+  width: 30%; 
+  text-align: right;   
+}
+.jk_bottom .all{
+  margin-top: 5.5%;
+  padding-left: 2%;  
+}
+.jk_bottom .js_button{
+  background: #dd2727;
+  float: right;
+  color: #fff;
+  font-size: 16px;
+  text-align: center;
+  width: 40%;
+  position: absolute;
+  right: 0;
+  line-height: 50px;
+}
+.c_t60{
+  clear: both;
+  height: 1px;
+  padding-top: 48px;
+}
+.blue{
+color: #42b1ff;
+}
+.mr_5{
+  margin-right: 5px;
+}
+.sh_dingsh{
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+  justify-content: space-between;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  line-height: 60rpx;
+  color: #666666;
+  font-size: 24rpx;
+}
+.redWord{
+  color: #FE4545;
+}
+page{
+  background: #fff;
+}
+.df_1{
+  width: 100%;
+  height: 176rpx;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  position: relative;
+  /* border: 1px solid #42b1ff; */
+  border-bottom: 2rpx solid #F3F3F3;
+}
+
+.search_no{
+  width: 100%;
+  height: 95rpx;
+  position: relative;
+  text-align: center;
+}
+.black{
+  width: 100%;
+  height: 20rpx;
+  background-color: #f6f6f6;
+  position: absolute;
+  top: -146rpx;
+  left: 0;
+}
+.font_14{
+  width: 379rpx;
+  height: 346rpx;
+  margin: 148rpx auto;
+  margin-bottom: 29rpx;
+}
+.scimg{
+  width: 379rpx;
+  height: 346rpx;
+}
+.search_no>text{
+  font-size:28rpx;
+  color:rgba(205,205,205,1);
+}
+
+
+.swiper-items{
+  height: 100%;
+}
+scroll-view{
+  height: 100%;
+}
+
+
+.service{
+  margin-right: 20rpx;
+}
+
+.service:last-child{ margin-right: 30rpx;}
+
+
+.itembutton{
+  display: flex;
+}
+.itembutton>view:last-child{
+   width: 160rpx;
+  height: 48rpx;
+  line-height: 48rpx;
+  text-align: center;
+  border-radius: 24rpx;
+  color: #F5AE32;
+  border: 1rpx solid #F5AE32;
+  font-size: 24rpx; 
+}
+
+
+.orange{
+  color: #F5AE32;
+  border: 1rpx solid #F5AE32;
+}
+.CallShow{
+  width: 100%;
+  height: 70%;
+}
+.zhezhaoceng{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  left: 0;
+  background: rgba(0, 0, 0, .3);
+  z-index: 500;
+}
+.zhezhaoone{
+  color: #000000;
+  /* background: #ffffff; */
+  height: 330rpx;
+  width: 100%;
+  padding-left: 30rpx;
+  position: absolute;
+  bottom: 40%;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  z-index: 600;
+}
+.zhezhaotwo{
+  width: 100%;
+  height:100%;
+  background: #ffffff;
+  border-radius: 20px  20px   20px  20px;
+}
+.kefu_lianxi{
+  width: 100%;
+  height: 80rpx;
+  background: #F6C75C;
+  color: #ffffff;
+  font-size: 28rpx;
+  border-radius: 20px  20px   0px  0px;
+  line-height: 80rpx;
+  text-align: center;
+}
+.btns{
+  display: flex;
+  margin: 60rpx 90rpx 102rpx 100rpx;
+  justify-content: space-between;
+}
+.btn_sigin{
+  width: 180rpx;
+  height:64rpx;
+  line-height: 64rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color:#F6C75C;
+  border: 1rpx solid #F6C75C;
+  border-radius: 20rpx;
+}
+.btn_wechat{
+  width: 190rpx;
+  height:64rpx;
+  line-height: 64rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #F6C75C;
+  border-radius: 20rpx;
+
+}
+.info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.info>view:first-child{
+  font-size: 24rpx;
+  color: #000000;
+  margin: 20rpx 0;
+}
+.info>view:last-child{
+  font-size: 24rpx;
+  color: #F6C75C;
+  font-weight: 600;
+}

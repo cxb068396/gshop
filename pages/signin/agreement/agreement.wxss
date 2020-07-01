@@ -1,0 +1,18 @@
+.xy-day{
+  width: 690rpx;
+  margin:0 auto;
+  color: #8a8a8a;
+  font-size: 28rpx;
+  padding-top: 10rpx;
+}
+.xy-rule{
+  width: 690rpx;
+  margin: 0 auto;
+  color: #8a8a8a;
+  font-size: 28rpx;
+  text-indent:2em;
+  padding-top: 10rpx;
+}
+.xy-one{
+  padding-top: 42rpx;
+}

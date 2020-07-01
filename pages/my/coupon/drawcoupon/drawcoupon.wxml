@@ -1,0 +1,75 @@
+<!--pages/my/coupon/drawcoupon/drawcoupon.wxml-->
+<!-- 领取优惠券页面 -->
+<view class="wrap">
+   <!-- 50元大额劵一行 -->
+  <view class="index-header">
+    <!--轮播图-->
+    <swiper class='lunbo v115-class-goods-scroll' previous-margin='0px' indicator-dots='true' autoplay='true' interval='4000'>
+      <swiper-item>
+        <image class="index-header-img" src="/pages/static/icon/banner.png"></image>
+      </swiper-item>
+    </swiper> 
+  </view>
+  <!-- 灰色的 -->
+  <view class="black"></view>
+  <!-- 立即领取 -->
+  <view class="index-liji">
+     <view class="index-liji-word">
+        <view class="line"></view>
+        立即领取
+        <view class="line1"></view>
+      </view>
+      <!-- wxs -->
+              <wxs src="../../../../utils/coupon.wxs" module="tools"/>
+      <scroll-view class="index-liji-container" scroll-x="true" bindscroll="scroll">
+        <view class="liji-container-box" wx:for="{{reduce1}}" wx:key="index" data-code="{{item.coupon_code}}" bindtap="drawCoupons">
+          <image  class="liji-container-one" src="/pages/static/icon/bg_color.png"/>
+          <view class="liji-container-onebox">
+             <view class="onebox-data">
+                 <view class="box">
+                   <view class="onebox-datay">￥</view>
+                   <view class="onebox-datas1">{{tools.my_coupon(item.minus)}}</view>
+                 </view>
+                 <view class="twobox-word1">限购{{item.coupon_name}}</view>
+                  <view class="twobox-word2">满{{tools.my_coupon(item.full)}}元使用</view>
+                  <view class="twobox-word3">优惠券</view>
+            </view>
+            <view class="liji-container-threebox">
+              <!-- <progress percent="{{item.innum}}" stroke-width="4px" color="#f6c75c" border-radius="3" activeColor="#FF3B00"/> -->
+              <slider value='{{item.get_count/item.grant_num/100}}'   disabled activeColor="#FF3B00"  block-size='12' block-color='#FF3B00' />
+          </view>
+          <view class="liji-container-fourbox">已抢{{tools.list(item)}}%</view>
+          </view>
+        </view>
+      </scroll-view>
+  </view>
+  <!-- 灰色的 -->
+  <view class="black1"></view>
+  <!-- 今日福利 -->
+  <view class="zanweis">
+    <view class="index-liji-wordss">
+        <view class="line_one"></view>
+        今日福利
+        <view class="line_two"></view>
+  </view>
+  </view>
+      <view class="footer-nocoupon" wx:if="{{!reduce2.length}}">
+        <image class="footer-nocoupon-img" src="/pages/static/icon/wu.png"/>
+        <view class="footer-nocoupon-word">暂无优惠券</view>
+     </view>
+  <view class="index-footer" wx:if='{{reduce2.length>0}}' wx:for="{{reduce2}}" wx:key="index">
+    <view class="index-footer-container">
+     <view class="footer-container-box">
+       <image src="../../../../pages/static/icon/bg_color_two.png" class="footer-container-img"></image>
+       <view class="footer-container-yuan">￥</view>
+       <view class="footer-container-pri" wx:if="{{reduce.minus > 10}}">{{tools.my_coupon(item.minus)}}</view>
+       <view class="footer-container-pri1" wx:else>{{tools.my_coupon(item.minus)}}</view>
+       <view class="footer-container-word">满{{tools.my_coupon(item.full)}}元使用</view>
+       <view class="footer-container-boxlittle">限购{{item.coupon_name}}</view>
+       <view class="footer-container-bottom" data-code="{{item.coupon_code}}" bindtap="drawCoupons">
+          <text>立即领取</text>
+       </view>
+     </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,64 @@
+<!-- 商品评价页面 -->
+<view class="index-wrap">
+  <!-- 商品评分 -->
+  <view class="index-header">
+    <image class="index-header-img" src="/pages/static/icon/headImg.png"></image>
+    <text class="index-header-word">商品评分</text>
+    <!-- 评分效果 使用vant组件 -->
+    <view class="index-header-starts">
+      <van-rate value="{{ value }}" size="{{ 18 }}" allow-half color="#F6C75C" void-color="#CDCDCD" void-icon="star" bind:change="onChange" gutter="25rpx" />
+    </view>
+  </view>
+  <!-- 商品评价和照片 -->
+  <view class="index-next">
+    <view class="index-next-box1">
+      <textarea class="index-next-word" id="information" maxlength='200' cols="500" placeholder="商品满意吗？ 说说你的心情，分享给想买的他们吧!          (评价字数不低于10个字)" name="information" value="{{information}}" bindinput="getDataBindTap"></textarea>
+    </view>
+    <view class="index-next-box2">
+      <!-- <view class="next-box2-pic" wx:for="{{picList}}" wx:key="index" bind:tap="item.operate">
+        <image class="box2-pic-img" src="{{item.images}}"></image>
+        <text class="box2-pic-text">{{item.texts}}</text>
+      </view> -->
+      <view class="next-box2-pic" bind:tap="addVideo" wx:if='{{video==""}}'>
+        <image class="box2-pic-img" src="/pages/static/icon/movie.png"></image>
+        <text class="box2-pic-text">添加视频</text>
+      </view>
+       <view class='video-pic'  wx:if='{{video !=""}}'>
+       <video id='prew_video'  class='video' src="{{video}}" show-play-btn="{{true}}"   controls="{{true}}"></video>
+       <view class='delete' bindtap="deleteVideo">x</view>
+      </view>
+      <view class="next-box2-pic">
+        <image class="box2-pic-img" src="{{img}}" bind:tap="addImage"></image>
+         <view class='delete' wx:if='{{img=="/pages/static/icon/pic.png"?false:true}}'   bindtap="deleteImg">x</view>
+        <text class="box2-pic-text">添加图片</text>
+      </view>
+    </view>
+  </view>
+  <!-- 物流服务 快递包装 送货速度 配送员服务 发布 -->
+  <view class="index-bottom">
+    <!-- <view class="index-bottom-box" wx:for="{{textList}}" wx:key="index">
+      <text class="bottom-box-text">{{item.contain}}</text>
+      <van-rate class="bottom-box-vant" :value="value1" size="{{ 18 }}" allow-half color="#F6C75C" void-color="#CDCDCD" void-icon="star" bind:change="onChange" gutter="25rpx" />
+    </view> -->
+      <view class="index-bottom-box">
+      <text class="bottom-box-text">物流服务</text>
+      <van-rate class="bottom-box-vant" value="value1" size="{{ 18 }}" allow-half color="#F6C75C" void-color="#CDCDCD" void-icon="star" bind:change="onChange1" gutter="25rpx" />
+    </view>
+     <view class="index-bottom-box">
+      <text class="bottom-box-text">快递包装</text>
+      <van-rate class="bottom-box-vant" value="value2" size="{{ 18 }}" allow-half color="#F6C75C" void-color="#CDCDCD" void-icon="star" bind:change="onChange2" gutter="25rpx" />
+    </view>
+     <view class="index-bottom-box">
+      <text class="bottom-box-text">送货速度</text>
+      <van-rate class="bottom-box-vant" value="value3" size="{{ 18 }}" allow-half color="#F6C75C" void-color="#CDCDCD" void-icon="star" bind:change="onChange3" gutter="25rpx" />
+    </view>
+     <view class="index-bottom-box">
+      <text class="bottom-box-text">配送员服务</text>
+      <van-rate class="bottom-box-vant" value="value4" size="{{ 18 }}" allow-half color="#F6C75C" void-color="#CDCDCD" void-icon="star" bind:change="onChange4" gutter="25rpx" />
+    </view>
+    <!-- 发布 -->
+    <view class="index-bottom-box1" bind:tap="postEvaluation">
+      <text>发布</text>
+    </view>
+  </view>
+</view>

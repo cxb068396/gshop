@@ -1,0 +1,229 @@
+/* pages/my/my.wxss */
+page{
+  color: #f6f6f6;
+}
+.my_heard{
+  width: 100%;
+  height: 274rpx;
+  background: #f6c75c;
+  position: relative;
+}
+.avatar{
+  width: 138rpx;
+  height: 138rpx;
+  position: absolute;
+  top: 50%;
+  left: 30rpx;
+  margin-top: -69rpx;
+  border-radius: 50%;
+}
+.my_imgbj{
+  width: 26rpx;
+  height: 26rpx;
+}
+.my_name{
+  width:300rpx;
+  height: 40rpx;
+  font-size: 30rpx;
+  color: #333333;
+  position: absolute;
+  top: 50%;
+  left: 200rpx;
+  margin-top: -20rpx;
+  font-weight: 600;
+  overflow: hidden; 
+  white-space: nowrap; 
+  text-overflow: ellipsis
+}
+.my_wsign{
+  line-height: 40rpx;
+  width: 100rpx;
+  font-size: 28rpx;
+  color: #666666;
+  position: absolute;
+  top: 50%;
+  margin-top: -35rpx;
+  left: 70rpx;
+  font-weight: 600;
+  background: #f6c75c;
+  border: none;
+}
+
+
+.my_wsbianji{
+  text-align: center;
+  line-height: 48rpx;
+  width: 100rpx;
+  height: 48rpx;
+  border-radius: 10rpx;
+  background: #f8d27d;
+  position: absolute;
+  top: 50%;
+  margin-top: -20rpx;
+  right: 30rpx;
+  color: #666666;
+  font-size: 22rpx;
+}
+.my_member{
+  color: #ffffff;
+  font-size: 24rpx;
+  position: absolute;
+  top:58%;
+  left: 200rpx;
+}
+page{
+  background: #f6f6f6;
+}
+.toAllorder{
+  width: 16rpx;
+  height: 28rpx;
+  position: relative;
+  top: 50%;
+  margin-top: -14rpx;
+}
+.personal{
+  width: 100%;
+  height: 86rpx;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  line-height: 86rpx;
+  border-bottom: 2rpx solid #F3F3F3;
+  display: flex;
+  justify-content: space-between;
+  background: #ffffff;
+}
+.personal_texo{
+  color: #222222;
+  font-size: 28rpx;
+}
+.personal_two{
+  font-size: 24rpx;
+  color: #888888;
+  margin-left: 65%;
+}
+.btn_fukuan{
+  width: 38rpx;
+  height: 37rpx;
+}
+.dib{
+  display: inline-block;
+  text-align: center;
+  margin:auto;
+  width: 120rpx;
+}
+.dib view{
+  color: #666666;
+  font-size: 24rpx;
+}
+.allorder{
+ width: 100%;
+ height: 142rpx;
+ /* border: 1rpx solid #222222; */
+ /* line-height: 142rpx; */
+ padding-left: 30rpx;
+ padding-right: 30rpx;
+ box-sizing: border-box;
+ display: flex;
+ justify-content: space-between;
+ background: #ffffff;
+}
+.zhezhaoceng{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0rpx;
+  left: 0;
+  background: rgba(0, 0, 0, .3);
+  z-index: 500;
+}
+.zhezhaoone{
+  color: #000000;
+  /* background: #ffffff; */
+  height: 330rpx;
+  width: 100%;
+  padding-left: 30rpx;
+  position: absolute;
+  bottom: 40%;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  z-index: 600;
+}
+.zhezhaotwo{
+  width: 100%;
+  height:100%;
+  background: #ffffff;
+  border-radius: 20px  20px   20px  20px;
+}
+.kefu_lianxi{
+  width: 100%;
+  height: 80rpx;
+  background: #F6C75C;
+  color: #ffffff;
+  font-size: 28rpx;
+  border-radius: 20px  20px   0px  0px;
+  line-height: 80rpx;
+  text-align: center;
+}
+.zhezhaotwo image{
+  width: 30rpx;
+  height: 30rpx;
+}
+.kefu_call{
+  display: inline-block;
+  color: #333333;
+  font-size: 28rpx;
+  padding-left: 5rpx;
+}
+.kefu_lione{
+  width: 100%;
+  text-align: center;
+  margin-top: 40rpx;
+}
+.kefu_time{
+  font-size: 20rpx;
+  color: #888888;
+}
+.kefu_dial{
+width:180rpx;
+height:48rpx;
+background:rgba(246,199,92,1);
+border-radius:24rpx;
+font-weight:400;
+color: #FFFFFA;
+font-size: 24rpx;
+text-align: center;
+line-height: 48rpx;
+margin: 52rpx auto;
+}
+.CallShow{
+  width: 100%;
+  height: 70%;
+}
+
+.btns{
+  display: flex;
+  margin: 84rpx 90rpx 102rpx 100rpx;
+  justify-content: space-between;
+}
+.btn_sigin{
+  width: 180rpx;
+  height:64rpx;
+  line-height: 64rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color:#F6C75C;
+  border: 1rpx solid #F6C75C;
+  border-radius: 20rpx;
+}
+.btn_wechat{
+  width: 190rpx;
+  height:64rpx;
+  line-height: 64rpx;
+  font-size: 24rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #F6C75C;
+  border-radius: 20rpx;
+
+}

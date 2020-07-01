@@ -1,0 +1,184 @@
+.weui-search-bar {
+  position: relative;
+  padding: 8rpx 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  /* background-color: #EFEFF4; */
+  /* border-top: 1rpx solid #D7D6DC; */
+  /* border-bottom: 1rpx solid #D7D6DC; */
+}
+
+.weui-icon-search_in-box {
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+
+.weui-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+  border-radius: 30px;
+  background: #FFFFFF;
+  border: 1rpx solid #fbc235;
+}
+
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+}
+
+.lunbo {
+  width: 100%;
+}
+
+.lunbo image {
+  width: 100%;
+  height: 90%;
+}
+
+.cenlun {
+  position: relative;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+  margin-top: 30rpx;
+}
+
+/* 轮播图指示点样式 */
+.v115-class-goods-scroll .wx-swiper-dots.wx-swiper-dots-horizontal {
+  margin-bottom: -10rpx;
+}
+
+.v115-class-goods-scroll .wx-swiper-dot {
+  width: 28rpx;
+  height: 8rpx;
+  display: inline-flex;
+  margin-left: 10rpx;
+  justify-content: space-between;
+}
+
+.v115-class-goods-scroll .wx-swiper-dot::before {
+  content: '';
+  flex-grow: 1;
+  background: rgba(238, 238, 238, .5);
+  border-radius: 6rpx
+}
+
+.v115-class-goods-scroll .wx-swiper-dot-active::before {
+  background: #fbc235;
+}
+
+.fenge1 {
+  width: 100%;
+  height: 2rpx;
+  background: #f1f1f1;
+  margin-top: 30rpx;
+}
+
+.rqshu {
+  width: 6rpx;
+  height: 32rpx;
+  background: #f6c75c;
+  position: relative;
+  top: 50%;
+  margin-top: -16rpx;
+
+}
+
+.popularity {
+  width: 100%;
+  height: 100rpx;
+}
+
+.popularity-fix {
+  height: 100rpx;
+  display: flex;
+  justify-content: space-between;
+  width: 170rpx;
+  line-height: 100rpx;
+  margin-left: 30rpx;
+}
+.popu-tex {
+  width: 140rpx;
+  font-size: 28rpx;
+  color: #666666;
+}
+.product{
+  top: -20rpx;
+  position: relative;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  width: 100%;
+  /* border: 1px solid #fbc235; */
+  box-sizing: border-box;
+  /* height: 350rpx; */
+}
+.product-fx{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap:  wrap ;
+}
+.product-fx-img{
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 12rpx;
+}
+.product-jus{
+  width: 220rpx;
+  /* height: 200rpx; */
+  text-align: left;
+  margin-top: 20rpx;
+}
+.product-jus>text{
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-line-orient: vertical;
+  overflow: hidden;
+  vertical-align: middle;
+  box-sizing: border-box;
+}
+.original{
+  text-decoration:line-through;
+  font-size: 24rpx;
+  color: #797979;
+}
+.product-jus-addition{
+  width: 42rpx;
+  height: 42rpx;
+  margin-top: 25rpx;
+}
+.product-jus-price{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  
+}
+.original-discount{
+  color: #ff4c4c;
+  font-size: 28rpx;
+}
+
+
+
+
+
+

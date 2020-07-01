@@ -1,0 +1,64 @@
+<!-- 引入wxParse -->
+<import src="../../../lib/wxParse/wxParse.wxml"/>
+<view class='caipu_container'>
+
+<view class="cp_header">
+	<image class="cp_heimg" src="{{str.picture}}"></image>
+	<view class="cp_hetitle">{{str.name}}</view>
+	<view class="cp_hecent">小知识：{{str.tips}}</view>
+</view>
+
+<!-- 灰色块 -->
+<view class="black"></view>
+
+<view class="cp_tuij">
+	<view class="cp_tuij_title">食材推荐</view>
+	<view class="cp_center">
+		<view class="cp_wrap" wx:for="{{contents}}" wx:key="index">
+			<image class="cp_img1" src="{{item.main_images}}"></image>
+			<view class="cp_text">{{item.title}}</view>
+			<view class="cp_money">￥{{item.sell_price}}</view>
+			<image class="cp_img2" src="/pages/static/icon/btn_icon_n.png" data-id="{{item.id}}" bindtap="pushchat"></image>
+		</view>
+	</view>
+</view>
+ 
+<!-- 灰色块 -->
+<view class="black"></view>
+
+<view style="background:#ffffff;" class="eat_cc">
+	<view class="eat_zhanwei"></view>
+	<view class="eat_cjcp">
+		<template is="wxParse" data="{{wxParseData:newBox.nodes}}"></template>
+	</view>
+</view>
+
+<!-- <view class="cp_shicai" >材料：鸡蛋5个、松花蛋3个、咸蛋2个材料：鸡蛋5个、</view> -->
+<block>
+<view class='wx_parse'>
+<template is="wxParse" data="{{wxParseData:lastBox.nodes}}"></template>
+</view>
+<!-- class="cp_shicai2" >{{item}}</view> -->
+</block>
+
+<!-- 购物车 -->
+<view class="cp_btnShop">
+ <image src="/pages/static/icon/btn_shopping_s.png" bindtap="toCar"></image>
+</view>
+
+<!-- 灰色块 -->
+<view class="black"></view>
+
+<view style="background:#ffffff;" class="eat_cc">
+	<view class="eat_zhanwei"></view>
+	<view class="eat_cjcp">推荐菜谱</view>
+</view>
+
+<view class="eat_center">
+	<view class="eat_cenone" wx:for="{{contents1}}" wx:key="index">
+		<image class="eat_cimg" src="{{item.picture}}"></image>
+		<view>{{item.name}}</view>
+	</view>
+</view>
+<view class="zhanW"></view>
+</view>

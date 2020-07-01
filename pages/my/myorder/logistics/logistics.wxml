@@ -1,0 +1,201 @@
+<view>
+<view>
+  <!-- <map class='map' latitude='{{latitude}}' longitude='{{longitude}}' polyline="{{polyline}}" scale='{{scale}}' markers='{{markers}}' /> -->
+  <map
+id="myMap"
+class='map'
+longitude="{{longitude}}" latitude="{{latitude}}"
+scale='{{scale}}'
+polyline="{{polyline}}"
+markers="{{markers}}"
+>
+</map>
+</view>
+<!--头部显示物流状态-->
+<view class='info'>
+<view class='logistic_header'>
+ <view class='logistic_info'>
+ <image src='/pages/static/icon/ren_tou.png'></image>
+ <text>运输中</text>
+ </view>
+</view>
+
+<!--物流信息-->
+
+<view  class='container_info'>
+<view class="logistic_infos" style='height:{{height}}rpx;position:{{position}}'>
+<!--头部-->
+<view class='infos_header'>
+<view class='infos_des'>
+<view class='infos_top'>
+<image src='/pages/static/icon/ren_tou.png'></image>   
+<view class='infos_top_detail'>
+ <view class='name'>liuxiangbang</view>
+ <view class='phone'>电话:18368843089 ></view>
+</view>
+</view>
+<view class='infos_bot'>
+<text>顺丰物流</text>
+<text>12345678989990 ></text>
+</view>
+</view>
+</view>
+<!--主体信息-->
+
+  <!-- 追踪 -->
+  <view class='logisit_info'>
+<!-- 物流时间轴 -->
+  <view class='expressRecord'>
+ 
+ 
+    <!-- 顶部收货地址 -->
+    <view class='expressRecord-getAddress'>
+      <view class='expressRecord-top'>
+        <view class='getAddress-icon'>
+          收
+        </view>
+        <view class='getAddress-text'>[收货地址] 广东省深圳市南山区 南山街道 亿利达大厦</view>
+      </view>
+    </view>
+ 
+    <!-- 顶部收货地址半个时间轴线 -->
+    <view class='noReach-online-top-close'></view>
+ 
+ 
+    <!-- 单个物流记录点时间轴：当前正在进行的物流状态 -->
+    <view class='expressRecord-single-close'>
+ 
+      <!-- 左边子容器 -->
+      <view class='expressRecord-single-noReach-online-top-close'>
+        <!-- 正在进行的时间轴上半个时间线 -->
+        <view class='online-top-closing'></view>
+        <!-- 正在进行的时间轴点 -->
+        <view class='dot-closing'><image src='../../../static/icon/btn_daifa.png'></image></view>
+        <!-- 正在进行的时间轴下半个时间线 -->
+        <view class='online-bottom'></view>
+      </view>
+ 
+      <!-- 右边子容器 -->
+      <view class='expressRecord-text'>
+        <view class='expressRecord-statusing'>运输中</view>
+        <view class='expressRecord-status-addressing'>武汉转运中心公司 已发出，下一站 深圳转运中心</view>
+      </view>
+ 
+      <!-- 相对父级容器绝对定位的日期 -->
+      <view class='expressRecord-dating'>
+        <view class='expressRecord-date-text'>
+          昨天
+        </view>
+        <view class='expressRecord-date-time'>
+          20:39
+        </view>
+      </view>
+    </view>
+ 
+ 
+    <!-- 单个物流记录点时间轴：已经过去的物流状态 -->
+    <view class='expressRecord-single-close'>
+      <view class='expressRecord-single-noReach-online-top-close'>
+        <view class='online-top-close'></view>
+        <view class='dot-close'></view>
+        <view class='online-bottom'></view>
+      </view>
+ 
+      <view class='expressRecord-text'>
+        <view class='expressRecord-status'></view>
+        <view class='expressRecord-status-address'>武汉转运中心公司 已收入</view>
+      </view>
+ 
+      <view class='expressRecord-date'>
+        <view class='expressRecord-date-text'>
+          昨天
+        </view>
+        <view class='expressRecord-date-time'>
+          20:37
+        </view>
+      </view>
+    </view>
+ 
+    <view class='expressRecord-single-close'>
+      <view class='expressRecord-single-noReach-online-top-close'>
+        <view class='online-top-close'></view>
+        <view class='dot-close'></view>
+        <view class='online-bottom'></view>
+      </view>
+ 
+      <view class='expressRecord-text'>
+        <view class='expressRecord-status'></view>
+        <view class='expressRecord-status-address'>湖北省孝感市汉川市公司 已打包</view>
+      </view>
+ 
+      <view class='expressRecord-date'>
+        <view class='expressRecord-date-text'>
+          昨天
+        </view>
+        <view class='expressRecord-date-time'>
+          14:37
+        </view>
+      </view>
+    </view>
+ 
+    <view class='expressRecord-single-close'>
+      <view class='expressRecord-single-noReach-online-top-close'>
+        <view class='online-top-close'></view>
+        <view class='dot-close1'><image src='../../../static/icon/btn_daifa.png'></image></view>
+        <view class='online-bottom'></view>
+      </view>
+ 
+      <view class='expressRecord-text'>
+        <view class='expressRecord-status'>已揽件</view>
+        <view class='expressRecord-status-address'>湖北省孝感市汉川市公司 已收件</view>
+      </view>
+ 
+      <view class='expressRecord-date'>
+        <view class='expressRecord-date-text'>
+          昨天
+        </view>
+        <view class='expressRecord-date-time'>
+          14:17
+        </view>
+      </view>
+    </view>
+ 
+    <view class='expressRecord-single-close'>
+      <view class='expressRecord-single-noReach-online-top-close'>
+        <view class='online-top-close'></view>
+        <view class='dot-close1'>
+        <image src='../../../static/icon/btn_daifa.png'></image></view>
+        <!-- 起始位置，下半个时间轴线不用 -->
+        <view class='online-bottom-start'></view>
+      </view>
+ 
+      <view class='expressRecord-text'>
+        <view class='expressRecord-status'>已发货</view>
+        <view class='expressRecord-status-address'>卖家发货</view>
+      </view>
+ 
+      <view class='expressRecord-date'>
+        <view class='expressRecord-date-text'>
+          昨天
+        </view>
+        <view class='expressRecord-date-time'>
+          13:50
+        </view>
+      </view>
+    </view>
+  </view>
+
+  </view>
+
+</view>
+<view wx:if='{{isshow}}' class='get_btns'>
+<view bindtap="getMore" class='moreInfo'>点击加载更多物流信息<image  src="../../../static/icon/myorder-pay-showmore.png"></image></view>
+</view>
+
+
+</view>
+</view>
+
+
+<!--结束标签-->
+</view>

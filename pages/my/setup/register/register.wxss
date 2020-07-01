@@ -1,0 +1,159 @@
+/* pages/my/setup/register/register.wxss */
+.wrap{
+  width: 100%;
+  height: 100%;
+}
+.shade{
+  width: 100%;
+  height: 100%;
+  top:0;   
+  background:rgba(0,0,0,0.5);   
+  overflow: hidden;   
+  /*要显示在wrap的上面 */   
+  z-index: 1;   
+  position: absolute;  
+}
+.conts{
+  width: 640rpx;
+  height: 903rpx;
+  /* border: 1rpx solid gold; */
+  margin: 105rpx auto;
+  margin-left: 40rpx;
+  position: relative;
+  overflow: hidden;
+}
+.conts_img{
+  width: inherit;
+  height: 856rpx;
+}
+.conts_newPeople{
+  width:275rpx;
+  height:63rpx;
+  font-size:68rpx;
+  font-family:BDZongYi-A001;
+  font-weight:normal;
+  color:rgba(255,255,255,1);
+  line-height:115rpx;
+  position: absolute;
+  top: 280rpx;
+  left: 199rpx;
+}
+.conts_more{
+  width:360rpx;
+  height:21rpx;
+  font-size:22rpx;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  color:rgba(249,248,248,1);
+  line-height:50rpx;
+  position: absolute;
+  top: 385rpx;
+  left: 159rpx;
+}
+.conts_box{
+  width:473rpx;
+  height:140rpx;
+  background:rgba(254,251,223,1);
+  box-shadow:1rpx 4rpx 5rpx 0rpx rgba(0, 0, 0, 0.16);
+  border-radius:20rpx;
+  overflow: hidden;
+  position: absolute;
+  top: 500rpx;
+  left: 99rpx;
+}
+.conts_box_img{
+  width:183rpx;
+  height:140rpx;
+}
+.noUse-imgwords{
+  width:148rpx;
+  height:46rpx;
+  font-size:50rpx;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  position: absolute;
+  top: 12rpx;
+  text-align: center;
+}
+.noUse-imgwords>text, .noUse-imgwords1>text{
+  font-size: 26rpx;
+}
+.noUse-imgwordsone{
+  /* width:135rpx; */
+  height:27rpx;
+  font-size:28rpx;
+  color:rgba(255,255,255,1);
+  position: absolute;
+  left: 7rpx;
+  top: 85rpx;
+  text-align: center;
+  margin: auto;
+}
+.noUse-imgwordstwo{
+  border-radius:10rpx;
+  color: #666;
+  font-size: 30rpx;
+  position: absolute;
+  left: 168rpx;
+  top: 20rpx;
+}
+.noUse-imgwordsthree{
+  width: 230rpx;
+  height: 63rpx;
+  font-size: 24rpx;
+  border-top:1px solid rgba(228,228,228,1);
+  position: absolute;
+  left: 168rpx;
+  bottom: 0;
+  line-height: 60rpx;
+  color: #999;
+}
+.conts_goUse{
+  width:50rpx;
+  height:140rpx;
+  background:rgba(205,205,205,1);
+  border-radius:0rpx 20rpx 20rpx 0rpx;
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  font-size:24rpx;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+}
+.conts_goUse>text{
+  display: inline-block;
+  width: 24rpx;
+  height: 80rpx;
+  margin-top: 20rpx;
+  margin-left: 12rpx;
+}
+.conts_lookMore{
+  width:180rpx;
+  height:48rpx;
+  background:rgba(246,199,92,1);
+  border-radius:24rpx;
+  position: absolute;
+  bottom: 165rpx;
+  left: 245rpx;
+  font-size:24rpx;
+  font-family:Source Han Sans CN;
+  font-weight:400;
+  color:rgba(255,255,255,1);
+  line-height:48rpx;
+  text-align: center;
+}
+.conts_lookMore_img{
+  width: 22rpx;
+  height: 28rpx;
+  position: absolute;
+  top: 10rpx;
+  right: 15rpx;
+}
+.closeImg{
+  width: 50rpx;
+  height: 50rpx;
+  margin-left: 50%;
+}

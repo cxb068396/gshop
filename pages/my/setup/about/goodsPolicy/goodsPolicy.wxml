@@ -1,0 +1,55 @@
+<!--pages/my/setup/about/goodsPolicy/goodsPolicy.wxml-->
+<view class="wrap">
+  <view class="wrap_container">
+     <view class="wrap_container_one sameOne">
+      <view style="font-weight: bold;">源膳退换货政策</view>
+      <view>依据《中华人民共和国产品质量法》、《中华人民共和国消费者权益保护法》等法律法规，</view>
+      <view>源膳承诺对于已销售的存在质量问题的商品办理退换货服务。</view>
+    </view>
+    <text class="wrap_container_four">一、信息收集</text>
+    <view class="wrap_container_two sameOne">
+        <view>（一）生鲜类商品由于受季节、气候环境等因素影响，不同批次略有差异属正常现象:</view>
+        <view>（二）生鲜产品的图片信息仅供参照，商品请以实物为准。因拍摄灯光及不同显示器色差等问题可能造成商品图片与实物有一定色差，不属质量问题。</view>
+    </view>
+    <text class="wrap_container_four">二、退换货规则</text>
+    <view class="wrap_container_two sameOne">
+        <view>（一）生鲜类商品，仅支持质量问题退换货。</view>
+        <view>（二）蔬菜水果、水产海鲜、宅配套餐类商品，签收后48小时内您发现验货时无法发现的质量问题，请与客服中心联系，并提交相关证明，我们为您进行售后处理。</view>
+        <view>（三）肉禽蛋品、有机米粮、粮油副食类商品，签收后7天内您发现验货时无法发现的质量问题，请与客服中心联系，并提交相关证明，我们为您进行售后处理。</view>
+    </view>
+    <text class="wrap_container_four">三、退回商品时，请您确保:</text>
+    <view class="wrap_container_two sameOne">
+        <view>（一）商品的外包装完整且未损坏。</view>
+        <view>（二）商品未经使用。</view>
+        <view>（三）商品退换，如含因购买商品所得的赠品，请将赠品一同寄回。</view>
+        <view>（四）如索要了发票，请将发票随商品一同寄回。如发票丢失，将无法办理退货。</view>
+        <view>（五）礼包或套装中的商品，不可以部分退货。因退货后，原礼包或套装中商品，将可能无法享受购买时的优惠。</view>
+        <view>（六）如购买商品时，使用了优惠券的订单，发生退货时，将根据用户实付金额退还。发生换货时，如所换商品仍适用原抵用券的使用要求，则仍可抵扣所换商品金额。</view>
+        <view>（七）通常情况下，一张订单只能进行一次退换货操作，所以为了确保您的权益，请您考虑周全后与我们联系。</view>
+        <view style="font-weight:bold;">特别申明，以下情况不予办理退换货：</view>
+        <view class="dianFather"><view class="dian"></view>任何非源膳出售的商品；</view>
+      <view class="dianFather"><view class="dian"></view>换货商品只能针对同一商品、同一价位的更换，不支持商品间换货及差价换货；</view>
+      <view class="dianFather"><view class="dian"></view>任何已使用过的商品，有质量问题的除外；</view>
+      <view class="dianFather"><view class="dian"></view>任何因客户原因导致超过保质期的商品；</view>
+      <view class="dianFather"><view class="dian"></view>任何因客户使用或保管不当导致出现质量问题的商品；</view>
+      <view class="dianFather"><view class="dian"></view>误用或不正确的使用方法所造成的食品质量问题，或撕毁、涂改标贴、防伪标记的商品不予退换货；</view>
+      <view class="dianFather"><view class="dian"></view>对于货物数量缺失的情况，需当场验货，一旦签收，我们将不再退换；</view>
+      <view class="dianFather"><view class="dian"></view>生鲜类商品不得以外观、个人口感等主观因素为由提出退换货；</view>
+      <view class="dianFather"><view class="dian"></view>对于临期特卖商品，非质量问题不退不换；</view>
+      <view class="dianFather"><view class="dian"></view>所有样品、派送品、赠品不予单独退货。</view>
+    </view>
+    <text class="wrap_container_four">四、第三方配送订单签收及退货说明</text>
+    <view class="wrap_container_two sameOne">
+        <view>（一）商品外包装无破损，不可以拒收，必须先签收。如商品无质量问题，不予退换货，如商品有质量问题，需要客户提供商品图片，并寄回商品(可视货值决定是否需要寄回) 。</view>
+        <view>（二）商品外包装破损，需配送员在场的情况下，拨打快递公司客服确认[需要快递公司配送员在面单上签字]，并通知源膳的客服。</view>
+        <view>（三）对于“源膳”原因造成的订单拒收，客户无需支付配送费;客户原因造成的订单拒收，“源膳”将收取您的双程配送费。</view>
+        <view>（四）订单签收后，商品如无质量问题将不能进行退货，如因质量问题需要退货，需先联系客服，源膳客服会为您处理。</view>
+        <view>（五）如果您的订单交由他人代收，代收人享有与您等同的权利，我们将视为您本人签收。</view>
+    </view>
+    <text class="wrap_container_four">五、使用优惠券的订单退货说明</text>
+    <view class="wrap_container_two sameOne">
+        <view>（一）若退货订单在下单时使用了优惠券，或若因该退货订单所获得的所有优惠券已被使用，则相应的优惠券金额将会按订单内商品价格平摊到退货商品的退款中。</view>
+        <view>（二）若订单发生退货，退货申请通过后，与该订单关联的所有优惠券将予以取消。</view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,94 @@
+/* 弹框 */
+/* 弹窗 */
+.modal-mask {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0.5;
+  overflow: hidden;
+  z-index: 9000;
+  color: #fff;
+}
+.modal-dialog {
+  width: 92%;
+  overflow: hidden;
+  position: fixed;
+  top: 50%;
+  left: 0;
+  z-index: 9999;
+  background: #f9f9f9;
+  margin: -180rpx 30rpx;
+  border-radius: 20rpx;
+}
+.modal-title {
+  /* padding-top: 28rpx; */
+  font-size:28rpx;
+  color:rgba(255,255,255,1);
+  text-align: center;
+  background-color: #F6C75C;
+  line-height: 80rpx;
+}
+.modal-content {
+  /* padding: 75rpx 32rpx; */
+  width: 690rpx;
+}
+.modal-input {
+  width: 690rpx;
+  height: 98rpx;
+  /* border: 1rpx solid blueviolet; */
+  margin: auto;
+  padding-left: 40rpx;
+  box-sizing: border-box;
+  position: relative;
+}
+.model-input-word{
+  font-size:28rpx;
+  color:rgba(136,136,136,1);
+  line-height: 98rpx;
+}
+.model-input-inp, .model-input-inp1{
+  border-radius: 50%;
+  width: 36rpx;/* 最好是4的倍数，不然会不在中间 */
+  height: 36rpx;
+  border: 1px solid #FBC235;/* 设置边框（外圆） */
+  font-size: 0;/* 让边框重合 */
+  display: inline-block;
+  position: absolute;
+  right: 40rpx;
+  top: 28rpx;
+}
+.yellow{
+  width: 20rpx;
+  height: 20rpx;
+  background-color: #FBC235;
+  border-radius: 50%;
+  margin: 8rpx 8rpx 8rpx 8rpx;
+}
+.line_a{
+  width: 610rpx;
+  height: 1rpx;
+  background-color: #cdcdcd;
+  margin-left: 40rpx;
+}
+.modal-footer {
+  font-size: 34rpx;
+  line-height: 60rpx;
+  padding-bottom: 49rpx;
+  padding-top: 10rpx;
+  box-sizing: border-box;
+}
+.btn-cancel {
+  width: 180rpx;
+  height: 48rpx;
+  color:white;
+  text-align: center;
+  background-color:  rgba(246,199,92,1);
+  border-radius:24rpx;
+  font-size: 24rpx;
+  display: inline-block;
+  line-height: 48rpx;
+  margin-left: 255rpx;
+}

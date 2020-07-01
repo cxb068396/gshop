@@ -1,0 +1,84 @@
+page{
+  background: #f6f6f6;
+}
+.edit_her{
+  width: 100%;
+  height: 286rpx;
+  background: #f6c75c;
+  text-align: center;
+}
+.avatar{
+  width: 165rpx;
+  height: 165rpx;
+  border-radius: 50%;
+  margin: 0 auto;
+  margin-top: 45rpx;
+}
+.avatar_imga{
+  font-size: 24rpx;
+  color: #ffffff;
+}
+.edit_all{
+  width: 100%;
+  height: 110rpx;
+  background: #ffffff;
+  margin-top: 20rpx;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+  
+
+}
+.edit_all image{
+  width:30rpx;
+  height: 30rpx;
+}
+.edit_name{
+  width: 70%;
+  display: inline-block;
+ 
+}
+.edit_center{
+  width: 400rpx;
+  display: inline-block;
+  height: 40rpx;
+  position: absolute;
+  left: 180rpx; 
+  color: #888888;
+  font-size: 24rpx;
+}
+.edit_cent{
+  display: inline-block;
+  margin-left: 40rpx; 
+  color: #888888;
+  font-size: 24rpx;
+}
+.edit_na{
+  width: 100rpx;
+  font-size: 28rpx;
+  color: #222222;
+  font-weight: 400;
+}
+.huiuyandengji{
+  font-size: 24rpx;
+  font-weight: 400;
+  color: #FF0000;
+  width: 500rpx;
+  padding-right: 30rpx;
+}
+.wancheng{
+width:690rpx;
+height:80rpx;
+background:rgba(246,199,92,1);
+border-radius:40px;
+color: #FFFEFE;
+font-size: 28rpx;
+text-align: center;
+line-height: 80rpx;
+margin: 0 auto;
+margin-top: 40rpx;
+}

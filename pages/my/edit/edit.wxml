@@ -1,0 +1,25 @@
+<view class="edit_her">
+
+ <image  bindtap="changeAvatar" class='avatar' src='{{userInfo.avatar}}' ></image>
+
+ <view bindtap="changeAvatar" class="avatar_imga">设置头像</view>
+
+</view>
+
+<view class="edit_all">
+    <view class="edit_name">
+        <text class="edit_na">昵称</text>
+        <input bindinput="wanch" class="edit_center" type="text" value="{{userInfo.username}}" ></input>
+    </view>
+    <view><image bindtap="deletename"  src="/pages/static/icon/xxxcuo.png" ></image></view>
+</view>
+
+<view class="edit_all">
+    <view class="edit_name">
+        <text class="edit_na">会员等级</text>
+        <text   class="edit_cent" type="text" >{{userInfo.vip}}</text>
+    </view>
+    <view class="huiuyandengji">（会员等级，用户不能修改）</view>
+</view>
+
+<view  bindtap="wancheng" class="wancheng">完成</view>

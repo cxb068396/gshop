@@ -1,0 +1,11 @@
+{
+  "usingComponents": {
+    "van-dialog": "/miniprogram_npm/@vant/weapp/dialog/index",
+    "order-item":"/pages/components/order-item/index",
+    "modal": "/pages/components/modal/index"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "我的订单",
+  "navigationBarTextStyle": "black",
+  "enablePullDownRefresh": true
+}

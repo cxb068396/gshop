@@ -1,0 +1,226 @@
+<!-- 订单详情 页面 -->
+<view class="wrap">
+	<!-- 待支付logo 倒计时 -->
+	<view class="index-header">
+		<!-- 1 待付款，2 已支付，3 待收货，4 待评价，5 售后/退款，6 订单取消，7 交易关闭  11 -->
+		<!-- status=1 待付款 -->
+		<block wx:if="{{status == 1}}">
+			<image class="index-header-img"  src="/pages/static/icon/stay_pay.png"></image>
+			<text class="index-header-word">待支付</text>
+			<text class="index-header-word1">{{countdown+'后将自动取消订单'}}</text>
+		</block>
+		<!-- status=2 已支付 -->
+		<block wx:if="{{status == 2}}">
+        	<image class="index-header-img"  src="/pages/static/icon/staysend.png"></image>
+			<text class="index-header-word">待发货</text>
+			<text class="index-header-word1" style="color: #F6C75C;" bind:tap="navigatePage" data-key="logistics">{{'正在通知快递公司，等待揽收'}}</text>
+		</block>
+		<!-- status=3 待收货 -->
+		<block wx:if="{{status == 3}}">
+        	<image class="index-header-img"  src="/pages/static/icon/staysend.png"></image>
+			<text class="index-header-word">物流信息</text>
+			<text class="index-header-word1" style="color: #F6C75C;" bind:tap="navigatePage"  data-key="logistics">{{'顺丰小哥派送中...'}}</text>
+		</block>
+		<!-- status=4 待评价 -->
+		<block wx:if="{{status == 4}}">
+        	<image class="index-header-img"  src="/pages/static/icon/okls.png"></image>
+			<text class="index-header-word">{{}}</text>
+			<text class="index-header-word1">{{}}</text>
+		</block>
+		<!-- status=5 退款/售后 -->
+		<block wx:if="{{status == 5 && pay_status==3}}">
+        	<image class="index-header-img"  src="/pages/static/icon/icon.png"></image>
+			<text class="index-header-word">申请退款</text>
+			<text class="index-header-word1" bind:tap="navigatePage"  data-key="drawback">{{'订单取消，等待后台审核'}}</text>
+		</block>
+			<block wx:if="{{status == 5 && pay_status==5}}">
+        	<image class="index-header-img"  src="/pages/static/icon/icon.png"></image>
+			<text class="index-header-word">已经退款</text>
+			<text class="index-header-word1" bind:tap="navigatePage"  data-key="drawback">取消订单</text>
+		</block>
+		<!-- status=6 订单取消 -->
+		<block wx:if="{{status == 6}}">
+    	<image class="index-header-img"  src="/pages/static/icon/cuowu.png"></image>
+			<text class="index-header-word">交易失败</text>
+			<text class="index-header-word1">取消订单</text>
+		</block>
+		<!-- status=7 交易关闭 -->
+		<block wx:if="{{status == 7}}">
+        	<image class="index-header-img"  src="/pages/static/icon/cuowu.png"></image>
+			<text class="index-header-word">交易关闭</text>
+			<text class="index-header-word1" style="color: #888888;">{{'超时自动关闭订单'}}</text>
+		</block>
+		<!-- status=8 交易成功 -->
+		<block wx:if="{{status == 8}}">
+        	<image class="index-header-img"  src="/pages/static/icon/okls.png"></image>
+			<text class="index-header-word">交易成功</text>
+			<text class="index-header-word1" style="color: #F6C75C;" bind:tap="navigatePage"  data-key="logistics">查看物流</text>
+		</block>	
+	</view>
+
+	<view class="index-black"></view>
+	<!-- 订单详情 -->
+	<view class="index-orderdetail">
+
+		<view class="index-orderdetail-yellow"></view>
+		<text class="index-orderdetail-text">收件信息：</text>
+		<view class="index-orderdetail-box">
+			<view class="orderdetail-box-name">{{address.name}}</view>
+			<view class="orderdetail-box-tel">{{address.mobile}}</view>
+			<view class="orderdetail-box-address">{{address.addr}}</view>
+		</view>
+	</view>
+
+	<view class="black-one"></view>
+
+	<view class="index-message">
+
+		<view>
+			<view class="index-orderdetail-yellow1"></view>
+			<text class="index-orderdetail-text">订单详情：</text>
+		</view>
+
+		<view wx:for="{{products}}" wx:key="{{index}}">
+			<!-- <image class="index-message-img" src="{{item.main_images}}"></image>
+			<text class="index-message-text">{{item.title}}</text>
+			<view class="index-message-textbox">
+				<text>{{item.description}}</text>
+			</view>
+			<text class="index-message-text1">￥{{item.price}}</text>
+			<text class="index-message-text2">x{{item.num}}</text> -->
+			<view class='container_box'>
+			  <image src="{{item.main_images}}"></image>
+				<view class='desc_info'>
+				<view class='title'>{{item.title}}</view>
+				<view class='des'>{{item.description}}</view>
+				<view class='price'>￥{{item.price}}</view>
+				</view>
+				<view class='num'>x{{item.num}}</view>
+			</view>
+		</view>
+	</view>
+
+	<view class="black-two"></view>
+
+	<view class="index-bottom">
+		<view class="index-bottom-one">
+			<view class="bottom-one-box">
+				<text class="bottom-word">订单金额:</text>
+				<text class="bottom-word1">￥{{prices.orderPrice}}</text>
+			</view>
+			<view class="bottom-one-box1">
+				<text class="bottom-words">优惠券抵扣:</text>
+				<text class="bottom-word1">{{prices.discount}}</text>
+			</view>
+			<view class="bottom-one-box1">
+				<text class="bottom-words">邮寄费用:</text>
+				<text class="bottom-word1">{{prices.sendfee}}</text>
+			</view>
+		</view>
+		<view class="index-bottom-two">
+			<text>
+        <text class="con">实付金额:</text> ￥{{prices.total}}</text>
+		</view>
+	</view>
+
+	<view class="black-three"></view>
+	<!-- 订单号 下单时间 订单备注 支付时间 支付方式 交易单号 -->
+	<view class="index-bcon">
+		<view class="index-bcon-box" wx:if="{{isShowMore}}">
+			<view class="bcon-box">
+				<view class="bcon-box-word">订单号</view>
+				<view class="bcon-box-con">{{orderDetail.orderNum}}</view>
+			</view>
+			<view class="bcon-box">
+				<view class="bcon-box-word">下单时间:</view>
+				<view class="bcon-box-con">{{orderDetail.createTime}}</view>
+			</view>
+			<view class="bcon-box">
+				<view class="bcon-box-word">订单备注:</view>
+				<view class="bcon-box-con">{{orderDetail.remark}}</view>
+			</view>
+			<view class="bcon-box">
+				<view class="bcon-box-word">支付时间:</view>
+				<view class="bcon-box-con">{{orderDetail.createTime}}</view>
+			</view>
+			<view class="bcon-box">
+				<view class="bcon-box-word">支付方式:</view>
+				<view class="bcon-box-con">微信支付</view>
+				<!-- <view class="bcon-box-con">{{orderDetail.}}</view> -->
+			</view>
+			<view class="bcon-box">
+				<view class="bcon-box-word">交易单号:</view>
+				<view class="bcon-box-con">{{orderDetail.payNum}}</view>
+			</view>
+		</view>
+		<view class="index-bcon-box" wx:if="{{!isShowMore}}">
+			<view class="bcon-box">
+				<view class="bcon-box-word">订单号</view>
+				<view class="bcon-box-con">{{orderDetail.orderNum}}</view>
+			</view>
+			<view class="bcon-box">
+				<view class="bcon-box-word">下单时间:</view>
+				<view class="bcon-box-con">{{orderDetail.createTime}}</view>
+			</view>
+			<view class="bcon-box">
+				<view class="bcon-box-word">订单备注:</view>
+				<view class="bcon-box-con">{{orderDetail.remark}}</view>
+			</view>
+		</view>
+		<image wx:if="{{!isShowMore}}" class="showmore" src="../../../static/icon/myorder-pay-showmore.png" bind:tap="showMoreDetail"></image>
+	</view>
+	<!-- 灰色 -->
+	<!-- <view class="block-four"></view> -->
+	<!-- 底部 -->
+	<view class="index-footer"  wx:if='{{isshow}}'>
+
+		<block wx:if="{{status == 1}}" data-desc="待付款">
+			<view class="index-footer-quxiao index-footer-button" bind:tap="cancelOrder">
+				<text>取消订单</text>
+			</view>
+			<view class="index-footer-gopay index-footer-button" bind:tap="payAgain">
+				<text>去支付</text>
+			</view>
+		</block>
+		<block wx:if="{{status == 2}}" data-sesc="待发货">
+			<view class="index-footer-quxiao index-footer-button"  bindtap='cancelOrder1'>
+				<text>取消订单</text>
+			</view>
+		</block>
+		<block wx:if="{{status == 3}}" data-sesc="待收货">
+			<view class="index-footer-quxiao index-footer-button" >
+				<text>售后/退款</text>
+			</view>
+			<view class="index-footer-gopay index-footer-button">
+				<text>确定收货</text>
+			</view>
+		</block>
+		<block wx:if="{{status == 4}}" data-sesc="待评价"></block>
+		<block wx:if="{{status == 5 &&pay_status==5}}" data-sesc="售后/退款">
+			<view class="index-footer-gopay index-footer-button" bindtap="deleteforever">
+				<text>删除订单</text>
+			</view>
+		</block>
+		<block wx:if="{{status == 6 &&pay_status==4}}" data-sesc="订单取消">
+			<view class="index-footer-quxiao index-footer-button" bindtap="deleteforever">
+				<text>删除订单</text>
+			</view>
+			<view class="index-footer-gopay index-footer-button" bindtap="buyAgain">
+				<text>再次购买</text>
+			</view>
+		</block>
+		<block wx:if="{{status == 7}}" data-sesc="交易关闭">
+
+		</block>
+		<block wx:if="{{status == 8}}" data-sesc="交易成功">
+			<view class="index-footer-quxiao index-footer-button" >
+				<text>删除订单</text>
+			</view>
+			<view class="index-footer-gopay index-footer-button">
+				<text>再次购买</text>
+			</view>
+		</block>
+	</view>
+</view>
+
+<modal></modal>

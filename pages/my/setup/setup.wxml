@@ -1,0 +1,37 @@
+<!-- 收货地址 -->
+<view class="srtup_dizhi">
+    <view class="srtup_left">我的收货地址</view>
+    <view>
+        <text bindtap="toaddress" class="srtup_right">管理我的收货地址</text>
+        <image class="srtup_img" src="/pages/static/icon/jiantou.png"></image>
+    </view>
+</view>
+<!-- 支付 -->
+<view class="srtup_dizhi">
+    <view class="srtup_left">微信免密支付</view>
+    <view>
+        <text class="srtup_right">去开通</text>
+        <image class="srtup_img" src="/pages/static/icon/jiantou.png"></image>
+    </view>
+</view>
+
+<view class="srtup_dizhi" bindtap="toAbout">
+    <view class="srtup_left">关于</view>
+    <view>
+        <image class="srtup_img" src="/pages/static/icon/jiantou.png"></image>
+    </view>
+</view>
+
+<view bindtap="toopinion"  class="srtup_dizhi">
+    <view class="srtup_left">意见反馈 </view>
+    <view>
+        <text class="srtup_right">期待您的意见与建议</text>
+        <image class="srtup_img" src="/pages/static/icon/jiantou.png"></image>
+    </view>
+</view>
+
+<view class="log_of" bindtap="tologin">
+    <text>退出登录</text>
+</view>
+
+

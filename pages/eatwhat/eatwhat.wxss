@@ -1,0 +1,166 @@
+.weui-search-bar {
+  position: relative;
+  padding: 8rpx 30rpx;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: flex;
+  box-sizing: border-box;
+  /* background-color: #EFEFF4; */
+  /* border-top: 1rpx solid #D7D6DC; */
+  /* border-bottom: 1rpx solid #D7D6DC; */
+}
+
+.weui-icon-search_in-box {
+  width: 28rpx;
+  height: 28rpx;
+  position: absolute;
+  left: 10px;
+  top: 7px;
+}
+
+.weui-search-bar__form {
+  position: relative;
+  -webkit-box-flex: 1;
+  -webkit-flex: auto;
+  flex: auto;
+  border-radius: 30px;
+  background: #FFFFFF;
+  border: 1rpx solid #fbc235;
+}
+
+.weui-search-bar__box {
+  position: relative;
+  padding-left: 30px;
+  padding-right: 30px;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1;
+}
+.weui-search-bar__input {
+  height: 28px;
+  line-height: 28px;
+  font-size: 14px;
+  color: #222;
+}
+.eat_c{
+  width: 100%;
+  padding-left: 30rpx;
+  height: 112rpx;
+  /* border: 1px solid #F6C75C; */
+  line-height:133rpx ;
+  position: relative;
+}
+.eat_zhanwei{
+  width: 6rpx;
+  height: 32rpx;
+  background: #F6C75C;
+  position: absolute;
+  left: 30rpx;
+  top: 43rpx;
+}
+.eat_cj{
+  display: inline-block;
+  margin-left: 20rpx;
+  color: #666666;
+  font-size: 28rpx;
+  position: absolute;
+  top: -9rpx;
+}
+.eat_cimg{
+  width: 210rpx;
+  height: 160rpx;
+  border-radius: 10rpx;
+}
+.eat_ctext{
+  line-height: 50rpx;
+}
+.eat_center{
+  width: 100%;
+  height: 220rpx;
+  padding-right: 30rpx;
+  box-sizing: border-box;
+  display: inline-block;
+  background-color: white;
+}
+.eat_cenone{
+  text-align: center;
+  color: #666666;
+  font-size: 24rpx;
+  display: inline-block;
+  margin-left: 30rpx;
+}
+.eat_bag{
+width:100%;
+height:288rpx;
+background:rgba(246,246,246,1);
+border-radius:10rpx;
+position: relative;
+padding-right: 30rpx;
+padding-left: 30rpx;
+box-sizing: border-box;
+}
+.eat_wai{
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  margin-top: 10rpx;
+}
+.eat_biaoti{
+  font-size: 28rpx;
+  color: #222222;
+  width: 400rpx;
+  height: 75rpx;
+  position: absolute;
+  top: 30rpx;
+}
+.eat_neir{
+  color: #888888;
+  font-size: 24rpx;
+  width: 400rpx;
+  height: 65rpx;
+  position: absolute;
+  top: 126rpx;
+
+  text-overflow:ellipsis;
+  overflow:hidden;
+  display:-webkit-box;
+  -webkit-line-clamp:2; /*这个数字是设置要显示省略号的行数*/
+  -webkit-box-orient:vertical;
+}
+.eat_bgimg{
+  width: 200rpx;
+  height: 152rpx;
+  position: absolute;
+  top: 30rpx;
+  right: 30rpx;
+}
+.eat_time{
+  color: #888888;
+  font-size: 20rpx;
+  position: absolute;
+  right: 30rpx;
+  bottom: 30rpx;
+}
+.eat_usertoux{
+  width: 36rpx;
+  height: 36rpx;
+  border-radius: 50%;
+  vertical-align:middle;
+  margin-left: 12rpx;
+}
+.eat_username{
+  color: #888888;
+  font-size: 20rpx;
+  vertical-align:middle;
+  display: inline-block;
+
+}
+.eat_user{
+  position: absolute;
+  left: 30rpx;
+  bottom: 30rpx;
+  width: 50%;
+}
+.eat_container{
+  overflow-x: hidden;
+}

@@ -1,0 +1,26 @@
+/* pages/my/setup/about/about.wxss */
+.wrap{
+  width: 100%;
+  height: 100%;
+}
+.index-headImg{
+  width: 224rpx;
+  height: 224rpx;
+  margin: 101rpx 263rpx 0 263rpx;
+}
+.index-two{
+  width:200rpx;
+  height:27rpx;
+  /* border: 1rpx solid red; */
+  font-size:28rpx;
+  color:rgba(51,51,51,1);
+  margin:89rpx auto;
+  margin-bottom: 59rpx;
+  line-height: 27rpx;
+  text-align: center;
+}
+.index-three{
+  font-size:28rpx;
+  color:rgba(51,51,51,1);
+  margin:0 250rpx 0 269rpx;
+}

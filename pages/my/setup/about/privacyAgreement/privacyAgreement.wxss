@@ -1,0 +1,139 @@
+/* pages/my/setup/about/privacyAgreement/privacyAgreement.wxss */
+page{
+  margin: 0;
+  padding: 0;
+}
+.sameOne{
+  width: 100%;
+  font-size:28rpx;
+  color:rgba(51,51,51,1);
+  line-height:48rpx;
+}
+.wrap{
+  width: 100%;
+}
+.wrap_container{
+  width: 90%;
+  margin: auto;
+}
+.wrap_container_one{
+  font-weight:400;
+  margin-top: 25rpx;
+}
+.cuti{
+  font-weight: bold;
+}
+.wrap_container_two{
+  margin-top: 50rpx;
+}
+.wrap_container_three{
+  margin-top: 50rpx;
+  text-indent: 2em;
+}
+.zhaiyao{
+  width: 100%;
+  font-size:30px;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  line-height:48px;
+  text-align: center;
+  margin-top: 49rpx;
+  margin-bottom: 25rpx;
+}
+.wrap_container_five{
+  font-weight:400;
+  text-indent: 2em;
+  margin-top: 25rpx;
+  text-indent: 2em;
+}
+.wrap_container_four{
+  display: block;
+  font-size:32rpx;
+  font-weight:bold;
+  color:rgba(51,51,51,1);
+  line-height:48rpx;
+  margin-top: 40rpx;
+  margin-left: 58rpx;
+}
+.sameTwo{
+  font-size:28rpx;
+  color:rgba(51,51,51,1);
+  line-height:48rpx;
+  text-indent: 2em;
+}
+.wrap_cobtainer_sixKittle{
+  font-weight:bold;
+  display: inline-block;
+  margin-top: 25rpx;
+  margin-bottom: 20rpx;
+}
+.wrap_container_six{
+  width: 100%;
+  font-weight:400;
+}
+.wrap_container_seven{
+  width: 100%;
+}
+.wrap_container_eight{
+  width: 100%;
+}
+.wrap_container_nine{
+  width: 100%;
+}
+.dianFather{
+  position: relative;
+  text-indent: 3em;
+}
+.dian{
+  width: 10rpx;
+  height: 10rpx;
+  border-radius: 50%;
+  background-color: #333;
+  display: inline-block;
+  margin-right: 10rpx;
+  position: absolute;
+  top: 20rpx;
+  left: 67rpx;
+}
+.wrap_container_fourthOne{
+  width: 100%;
+}
+.wrap_container_fivethOne{
+  width: 100%;
+}
+.wrap_container_sixthOne{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.wrap_container_seventhOne{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.wrap_container_eightthOne{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.wrap_container_ninethOne{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.wrap_container_tenthOne{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.wrap_container_twelveTwo{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.wrap_container_thirdTwo{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.wrap_container_fourTwo{
+  width: 100%;
+  margin-top: 20rpx;
+}
+.wrap_container_fiveTwo{
+  width: 100%;
+  margin-top: 20rpx;
+}

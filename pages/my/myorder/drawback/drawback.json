@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "radio-modal": "/pages/components/radio-modal/index"
+  },
+  "navigationBarBackgroundColor": "#ffffff",
+  "navigationBarTitleText": "申请退款",
+  "navigationBarTextStyle": "black"
+}

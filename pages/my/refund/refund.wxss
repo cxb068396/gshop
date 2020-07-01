@@ -1,0 +1,12 @@
+@import "../myorder/myorder.wxss";
+.shop{
+  margin-top: 20rpx;
+}
+.redWord{
+  color: #FE4545;
+}
+.youpurch{
+  position: absolute;
+  bottom: 20rpx;
+  right: 30rpx;
+}

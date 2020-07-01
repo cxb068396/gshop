@@ -1,0 +1,62 @@
+<!-- 退款/售后页面 -->
+<view class="wrap">
+	<!-- 图片信息这些 -->
+	<view class="index-message">
+		<image class="index-message-img" src="/pages/static/icon/caipu_3.png"></image>
+		<text class="index-message-text">源膳富硒绿壳鸡蛋</text>
+		<text class="index-message-text1">￥150.00</text>
+		<text class="index-message-text2">x1</text>
+	</view>
+	<!-- 货物状态 退款原因 <view class="index-change-status" bindtap="modalinput"> -->
+	<view class="index-change" >
+		<view class="index-change-status">
+			<text class="change-status">货物状态:</text>
+			<text class="change-noget" bindtap="chooseGoodsStatus">{{goodsStatus}}</text>
+			<image src="/pages/static/icon/jiantou.png" class="change-img" bindtap="gocloseorder"></image>
+
+		</view>
+		<view class="index-change-status1">
+			<text class="change-status1">退款原因:</text>
+			<text class="change-noget1" bind:tap="chooseRefundReason">{{refundReason?refundReason:'请选择'}}</text>
+			<image src="/pages/static/icon/jiantou.png" class="change-img1" bind:tap="chooseRefundReason"></image>
+		</view>
+	</view>
+	<!-- 退款金额 退款说明 -->
+	<view class="index-dback">
+		<view class="index-dback-box">
+			<text class="dback-box-price">退款金额:</text>
+			<text class="dback-box-red">￥50.00</text>
+			<view class="dback-box-word">最多￥150.00，含物流费用￥0.00</view>
+		</view>
+		<view class="index-dback-boxone" style="display:flex;align-items: center;">
+			<text class="dback-boxone-text">退款说明:</text>
+			<input class="dback-boxone-text1" placeholder="选填"></input>
+		</view>
+	</view>
+	<!-- 上传凭证 -->
+	<view class="index-download">
+		<view class="index-download-all">
+			<view class="download-all-one">
+				<text class="all-one-one">上传凭证:</text>
+				<text class="all-one-two">必填,最多提供3张图片凭证</text>
+			</view>
+			<view class="download-all-two">
+				<view class="next-box2-pic" wx:for="{{picList}}"  data-index="{{index}}"  >
+					<image class="box2-pic-img" src="{{item.images}}" data-index="{{index}}" bindtap="chooseImg"></image>
+					<view wx:if='{{item.images=="/pages/static/icon/pic.png"?false:true}}' class='delete' bindtap="deleteiImg"  data-index="{{index}}">x</view>
+					<text class="box2-pic-text">{{item.texts}}</text>
+				</view>
+			</view>
+		</view>
+	</view>
+	<!-- 提交 -->
+	<view class="index-submit" bind:tap="commitRefund">
+		<text>提交</text>
+	</view>
+</view>
+
+<radio-modal></radio-modal>
+
+<!-- <radio-modal radioOptions="{{radioOptions}}" title="货物状态" bind:cancel="onCancel" bind:radioSelected="onGoodsStatusConfirm" wx:if="{{showModal}}"></radio-modal>
+
+<radio-modal radioOptions="{{radioOptions1}}" title="退款原因" bind:cancel="onCancel" bind:radioSelected="onGoodsStatusConfirm1" wx:if="{{showRefundReasonModal}}"></radio-modal> -->

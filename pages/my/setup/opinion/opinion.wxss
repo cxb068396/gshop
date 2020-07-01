@@ -1,0 +1,57 @@
+/* pages/my/setup/opinion/opinion.wxss */
+page{
+  background: #f6f6f6;
+}
+.wenti{
+  width: 100%;
+  height: 94rpx;
+  padding-left: 30rpx;
+  line-height: 94rpx;
+  background: #ffffff;
+  margin-top: 10rpx;
+}
+.wenti text{
+  color: #222222;
+  font-size: 28rpx;
+}
+.line{
+  width:100%;
+  height:2rpx;
+  background:rgba(245,245,245,1);
+}
+.jianyi{
+  font-size: 24rpx;
+  color: #666666;
+  padding-left: 30rpx;
+  padding-top: 25rpx;
+}
+.tofwuqi{
+  width:690rpx;
+height:79rpx;
+background:rgba(246,199,92,1);
+border-radius:40rpx;
+margin: 60rpx auto;
+text-align: center;
+line-height: 79rpx;
+color: #FFFFFF;
+font-size: 28rpx;
+font-weight:bold;
+}
+.textarea-bg {
+  background-color: #fff;
+  width: 100%;
+  height:304rpx;
+  padding-top: 20rpx;
+  padding-right: 30rpx;
+  padding-left: 30rpx;
+  box-sizing: border-box;
+  color: #666666;
+  font-size: 24rpx;
+}
+.word{
+  position: absolute;
+  bottom:30rpx;
+  right:30rpx;
+  font-size: 22rpx;
+  color: #CDCDCD;
+}

@@ -1,0 +1,131 @@
+<view class="payment_header"> 
+<image  src="/pages/static/icon/okls.png" ></image>
+<text class="payment_tishione">订单提交成功，请尽快完成支付！</text>
+<text class="payment_tishi" >超时，订单将自动取消,计时：{{countdown}}</text>
+</view>
+
+<view class="ment_order">
+<view class="seat"></view>
+<text>订单详情</text>
+</view>
+
+<!-- <view class="payment_he" >
+<view class="payment_hee">
+<text class="payment_he_hao" >订单号:</text>
+<text class="payment_he_hao" >{{order_num}}</text>
+</view>
+</view> -->
+
+<view class="payment_two">
+<view class="payment_he_hao">
+<!-- <text>收货信息:</text> -->
+<text >{{address.name}}</text>
+<text style="margin-left:20rpx">{{address.mobile}}</text>
+<view class="payment_dizhi">{{address.province}}{{address.city}}{{address.county}}{{address.area}}</view>
+</view>
+</view>
+
+<!-- 灰色 -->
+<view class="block"></view>
+
+<block wx:for="{{carts}}" wx:for-item="item" wx:for-index="idx"  >
+<view class="order">
+   <image class="order_shopimg" src="{{item.main_images}}" ></image>
+   <view class="order_sku">
+      <!-- 标题 -->
+      <text class="order_title" >{{item.title}} </text>
+      <!-- 活动名称 -->
+      <text class="order_activity">{{item.description}}</text>
+      <!-- 单价 -->
+      <text class="order_price">￥{{item.sell_price}} </text>
+   </view>
+   <!-- 件数 -->
+     <view class="orde_unmdf">x{{item.num}}</view>
+</view>
+</block>
+
+<!-- 灰色 -->
+<view class="black"></view>
+
+<!-- 支付金额  支付方式 剩余支付时间 -->
+	<view class="index-bottom">
+		<view class="index-bottom-one">
+			<view class="bottom-one-box">
+				<text class="bottom-word">订单金额:</text>
+				<text class="bottom-word1">￥{{total}}</text>
+			</view>
+			<view class="bottom-one-box1">
+				<text class="bottom-words">优惠券抵扣</text>
+				<text class="bottom-word1">￥100.00</text>
+			</view>
+         <view class="bottom-one-box1">
+				<text class="bottom-words">邮寄费用</text>
+				<text class="bottom-word1">￥0.00</text>
+			</view>
+		</view>
+		<view class="index-bottom-two">
+			<text>
+        <text class="con">实付金额:</text> ￥{{total}}</text>
+		</view>
+	</view>
+
+<!-- 灰色 -->
+<view class="black"></view>
+
+<!-- 订单号 下单时间 订单备注 支付时间 支付方式 交易单号 -->
+	<view class="index-bcon">
+		<block wx:if="{{!isShowMore}}">
+			<view class="index-bcon-box">
+				<view class="bcon-box">
+					<view class="bcon-box-word">订单号</view>
+					<view class="bcon-box-con">{{order_num}}</view>
+				</view>
+			<view class="bcon-box">
+					<view class="bcon-box-word">下单时间</view>
+					<view class="bcon-box-con"> {{expiration_time}}</view>
+				</view>
+			<view class="bcon-box">
+					<view class="bcon-box-word">订单备注</view>
+					<view class="bcon-box-con">{{remark}}</view>
+				</view>
+			</view>
+		</block>
+		<!-- <block wx:if="{{isShowMore}}">
+			<view class="index-bcon-box">
+				<view class="bcon-box">
+					<view class="bcon-box-word">订单号</view>
+					<view class="bcon-box-con">{{order_num}}</view>
+				</view>
+			<view class="bcon-box">
+					<view class="bcon-box-word">下单时间</view>
+					<view class="bcon-box-con"> {{expiration_time}}</view>
+				</view>
+			<view class="bcon-box">
+					<view class="bcon-box-word">订单备注</view>
+					<view class="bcon-box-con"></view>
+				</view>
+			</view>
+			<view class="index-bcon-box">
+				<view class="bcon-box">
+					<view class="bcon-box-word">支付时间</view>
+					<view class="bcon-box-con">{{}}</view>
+				</view>
+			<view class="bcon-box">
+					<view class="bcon-box-word">支付方式</view>
+					<view class="bcon-box-con"> {{}}</view>
+				</view>
+			<view class="bcon-box">
+					<view class="bcon-box-word">交易单号</view>
+					<view class="bcon-box-con"></view>
+				</view>
+			</view>
+		</block>
+		<image wx:if="{{!isShowMore}}" class="showmore" src="/pages/static/icon/myorder-pay-showmore.png" bind:tap="showMoreDetail"></image> -->
+	</view>
+
+<view class="pay_tobbom">
+	<view class="pay_quxiao" bindtap="delOrder">取消订单</view>
+	<view bindtap="paymaney" class="pay_tofuk">去支付</view>
+</view>
+
+<modal></modal>

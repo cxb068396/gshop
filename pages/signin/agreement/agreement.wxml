@@ -1,0 +1,18 @@
+<view class="xy-day">
+  <text>更新日期 ：</text>
+  <text>{{day}}</text>
+</view>
+<view class="xy-day">
+  <text>生效日期 ：</text>
+  <text>{{oneday}}</text>
+</view>
+
+<view class="xy-rule xy-one">
+  <text>{{rule}}</text>
+</view>
+<view  class="xy-rule">
+<text >{{ruletwo}}</text>
+</view>
+<view  class="xy-rule">
+<text>{{ruletherr}}</text>
+</view>

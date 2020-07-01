@@ -1,0 +1,28 @@
+
+<view class="shop df" >
+	<view class="sh_dingsh" bind:tap="navigateToDetail">
+		<view>订单号：{{order.order_num}}</view>
+		<view wx:if='{{order.order_status==1}}' class="redWord">待付款</view>
+		<view wx:if='{{order.order_status==2}}' class="redWord">待发货</view>
+		<view wx:if='{{order.order_status==8}}' class="redWord">交易成功</view>
+		<view wx:if='{{order.order_status==6}}' class="redWord">交易失败</view>
+		<view wx:if='{{order.order_status==4}}' class="redWord">待评价</view>
+		<view wx:if='{{order.order_status==5}}' class="redWord">已退款</view>
+	</view>
+	<view class="df_1" bind:tap="navigateToDetail">
+		<image class="sh_slt" src="{{order.main_images}}"></image>
+		<view class="sp_text">
+			<navigator url="../index/detail?productId={{order.pid}}" hover-class="changestyle">
+				<view class="sp_tit ovh1">{{order.product[0].title}}</view>
+			</navigator>
+			<view class="sp_neb">¥ {{order.product[0].price}} </view>
+			<view class="sp_procoubt"> ×{{order.product[0].num}}</view>
+			<view class="sp_jjsp">共{{order.product[0].num}}件商品</view>
+			<view class="sp_jg">合计<text style="color:#333333;font-size:26rpx" >￥{{order.total}}</text></view>
+		</view>
+	</view>
+  <view class="flex">
+	  <slot></slot>
+  </view>
+	
+</view>
